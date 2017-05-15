@@ -40,6 +40,11 @@ client.on('message', message => {
       return;
     }
   }
+  if (message.content === prefix + 'triforce') {
+      message.delete()
+      message.channel.send('http://prnt.sc/f893h0')
+      console.log(message.author.tag + ' used ' + message.content)
+  }
 });
 
 client.login(token);
