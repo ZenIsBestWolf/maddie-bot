@@ -1,6 +1,10 @@
 {
   "name": "maddie-bot",
   "version": "1.0.0",
+  "engines": {
+	"node": "7.10.0"
+	"npm": "4.2.0"
+  }
   "description": "A bot I guess...",
   "main": "index.js",
   "scripts": {
