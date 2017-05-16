@@ -1,10 +1,11 @@
 {
-  "name": "maddie",
+  "name": "maddie-bot",
   "version": "1.0.0",
   "description": "A bot I guess...",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+	"start": "node index.js"
   },
   "author": "Zennnnnnnnnnnnnnn",
   "license": "MIT",
