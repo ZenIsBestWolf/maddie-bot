@@ -28,7 +28,7 @@ client.on('message', message => {
   if (message.content === prefix + 'help') {
     message.delete()
     message.reply('check your DMs!')
-    message.author.send('The commands are, blanket, james, ripchat, and help! Use these with your prefix.')
+    message.author.send('Here\'s the list of commands!\n ```\n/ripchat\n/james (temp)\n/blanket\n/help\n/shutdown (owner only)\n/triforce\n/ripchatimg\n/coffee\n/triggered```These are all that have been developed. More coming on the way!')
     console.log(message.author.tag + ' used ' + message.content)
   }
   if (message.content === prefix + 'shutdown') {
@@ -44,6 +44,21 @@ client.on('message', message => {
       message.delete()
       message.channel.send('http://prnt.sc/f893h0')
       console.log(message.author.tag + ' used ' + message.content)
+  }
+  if (message.content === prefix + 'ripchatimg') {
+    message.delete()
+    message.channel.send('https://prnt.sc/f8lyf9')
+    console.log(message.author.tag + ' used ' + message.content)
+  }
+  if (message.content === prefix + 'coffee') {
+    message.delete()
+    message.channel.send('https://media.giphy.com/media/b4Lyqm2nSdUze/giphy.gif')
+    console.log(message.author.tag + ' used ' + message.content)
+  }
+  if (message.content === prefix + 'triggered') {
+    message.delete()
+    message.channel.send('https://media.giphy.com/media/xUA7b7lt0fKp7wVm4o/giphy.gif')
+    console.log(message.author.tag + ' used ' + message.content)
   }
 });
 
