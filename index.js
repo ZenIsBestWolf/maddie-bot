@@ -45,12 +45,12 @@ client.on('message', message => {
       message.channel.send('http://prnt.sc/f893h0')
       console.log(message.author.tag + ' used ' + message.content)
   }
-  if message.content === (prefix + 'ripchatimg') {
+  if (message.content === prefix + 'ripchatimg') {
     message.delete()
     message.channel.send('https://prnt.sc/f8lyf9')
     console.log(message.author.tag + ' used ' + message.content)
   }
-  if message.content === (prefix + 'coffee') {
+  if (message.content === prefix + 'coffee') {
     message.delete()
     message.channel.send('https://media.giphy.com/media/b4Lyqm2nSdUze/giphy.gif')
     console.log(message.author.tag + ' used ' + message.content)
