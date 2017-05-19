@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = require("./token.json").token;
+//const token = require("./token.json").token; - For local use ONLY! Obsolete since I use Heroku now. :)
 
 client.on('ready' ,() => {
   console.log('Online. The prefix is: ' + prefix) + '.';
@@ -9,17 +9,17 @@ client.on('ready' ,() => {
 var prefix = '/';
 
 client.on('message', message => {
-  if (message.content === '/ripchat') {
+  if (message.content === prefix + 'ripchat') {
     message.delete();
     message.channel.send('chat is ded why guys!!11!1');
     console.log(message.author.tag + ' used ' + message.content);
   }
-  if (message.content === '/james') {
+  if (message.content === prefix + 'james') {
     message.delete();
     message.reply('oh yeah that dude is a cool person');
     console.log(message.author.tag + ' used ' + message.content);
   }
-  if (message.content === '/blanket') {
+  if (message.content === prefix + 'blanket') {
     message.delete();
     message.channel.send('http://prntscr.com/f7kpom');
     console.log(message.author.tag + ' used ' + message.content);
@@ -27,7 +27,7 @@ client.on('message', message => {
   if (message.content === prefix + 'help') {
     message.delete();
     message.reply('check your DMs!');
-    message.author.send('Here\'s the list of commands!\n ```\n/ripchat\n/james (temp)\n/blanket\n/help\n/shutdown (owner only)\n/triforce\n/ripchatimg\n/coffee\n/triggered\n/mocha```These are all that have been developed. More coming on the way!');
+    message.author.send('Here\'s the list of commands!\n ```\n/ripchat - Sends a message grieving over the death of chat.\n/james (temp) - A test command that will probably be removed soon. All it does is tell you that he\'s a cool person.\n/blanket - If someone\'s cold, not anymore!\n/help - Display\'s THIS message.\n/shutdown (owner only) - A command used by the dev \(zennnnnnnnnnnnnnn#0446\) to force shutdown Maddie.\n/triforce - The triforce of bed!\n/ripchatimg - Image version of /ripchat, from the TwoKinds community discord server.\n/coffee - When someone\'s hyper.\n/triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n/mocha - The saviour of lack of sleep and replenisher of energy!\n/source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.```These are all that have been developed. More coming on the way!');
     console.log(message.author.tag + ' used ' + message.content);
   }
   if (message.content === prefix + 'shutdown') {
@@ -64,6 +64,7 @@ client.on('message', message => {
     message.send('https://prnt.sc/f9nnin');
     console.log(message.author.tag + ' used ' + message.content);
 	}
-});
-
-client.login(process.env.TOKEN);
+  if (message.content === prefix + 'source') {
+      message.delete();
+      message.reply(' the source code is on GitHub and is written by Zen \(zennnnnnnnnnnnnnn#0446\) Here\'s the link to the repository: https://github.com/zennnnnnnnnnnnnnn/maddie-bot)');
+      console.log(message.author.tag + ' used '
