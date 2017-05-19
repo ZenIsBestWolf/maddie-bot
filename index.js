@@ -67,4 +67,8 @@ client.on('message', message => {
   if (message.content === prefix + 'source') {
       message.delete();
       message.reply(' the source code is on GitHub and is written by Zen \(zennnnnnnnnnnnnnn#0446\) Here\'s the link to the repository: https://github.com/zennnnnnnnnnnnnnn/maddie-bot)');
-      console.log(message.author.tag + ' used '
+      console.log(message.author.tag + ' used ' + message.content);
+  }
+});
+
+client.login(process.env.TOKEN);
