@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//const token = require("./token.json").token; - For local use ONLY! Obsolete since I use Heroku now. :)
+//const token = require("./token.json").token;
+var token = process.env.TOKEN
 
 client.on('ready' ,() => {
   console.log('Online. The prefix is: ' + prefix) + '.';
@@ -71,4 +72,4 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(token);
