@@ -5,6 +5,8 @@ var token = process.env.TOKEN;
 client.on('ready' ,() => {
   console.log('Online. The prefix is: ' + prefix) + '.';
   client.user.setStatus('online', 'with Maeve!');
+  .then(user => console.log('check what the bot is playing xd'))
+ +     .catch(console.log);
 });
 
 var prefix = '/';
