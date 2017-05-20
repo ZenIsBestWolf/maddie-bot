@@ -61,7 +61,7 @@ client.on('message', message => {
   }
   if (message.content === prefix + 'mocha') {
 		message.delete();
-    message.send('https://prnt.sc/f9nnin');
+    message.channel.send('https://prnt.sc/f9nnin');
     console.log(message.author.tag + ' used ' + message.content);
 	}
   if (message.content === prefix + 'source') {
