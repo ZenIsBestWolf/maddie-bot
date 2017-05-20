@@ -28,12 +28,12 @@ client.on('message', message => {
   if (message.content === prefix + 'help') {
     message.delete();
     message.reply('check your DMs!');
-    message.author.send('Here\'s the list of commands!\n ```\n/ripchat - Sends a message grieving over the death of chat.\n/james (temp) - A test command that will probably be removed soon. All it does is tell you that he\'s a cool person.\n/blanket - If someone\'s cold, not anymore!\n/help - Display\'s THIS message.\n/shutdown (owner only) - A command used by the dev \(zennnnnnnnnnnnnnn#0446\) to force shutdown Maddie.\n/triforce - The triforce of bed!\n/ripchatimg - Image version of /ripchat, from the TwoKinds community discord server.\n/coffee - When someone\'s hyper.\n/triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n/mocha - The saviour of lack of sleep and replenisher of energy!\n/source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.```These are all that have been developed. More coming on the way!');
+    message.author.send('Here\'s the list of commands!\n ```\n/ripchat - Sends a message grieving over the death of chat.\n/james (temp) - A test command that will probably be removed soon. All it does is tell you that he\'s a cool person.\n/blanket - If someone\'s cold, not anymore!\n/help - Display\'s THIS message.\n/restart (owner only) - A command used by the dev \(zennnnnnnnnnnnnnn#0446\) to force restart Maddie\'s Heroku process.\n/triforce - The triforce of bed!\n/ripchatimg - Image version of /ripchat, from the TwoKinds community discord server.\n/coffee - When someone\'s hyper.\n/triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n/mocha - The saviour of lack of sleep and replenisher of energy!\n/source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.```These are all that have been developed. More coming on the way!');
     console.log(message.author.tag + ' used ' + message.content);
   }
-  if (message.content === prefix + 'shutdown') {
+  if (message.content === prefix + 'restart') {
     if (message.author.tag === 'zennnnnnnnnnnnnnn#0446') {
-      console.log('Shutting down on demand...');
+      console.log('Restarting on demand...');
       process.exit();
     }
     else {
