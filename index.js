@@ -27,7 +27,7 @@ client.on('message', message => {
       console.log(message.author.tag + ' used ' + message.content);
   }
   if (message.content === prefix + 'ripchat') {
-    if (message.guild.id === '317036338841124864') {
+    if (message.guild.id === '165725395348357120') {
       message.channel.send('Sorry! !ripchat is disabled in this Guild. Here\'s the information on the block:\n```Guild: TwoKinds Group Chat\nGuild ID: (165725395348357120)\nRequester: Dust#0538\nReason: Previous spam.```')
     }
     else {
