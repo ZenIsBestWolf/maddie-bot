@@ -27,9 +27,15 @@ client.on('message', message => {
       console.log(message.author.tag + ' used ' + message.content);
   }
   if (message.content === prefix + 'ripchatimg') {
+    if (message.guild === '165725395348357120') {
+      return
+    }
+    else {
+
     message.delete()
     message.channel.send('https://prnt.sc/f8lyf9');
     console.log(message.author.tag + ' used ' + message.content);
+    }
   }
   if (message.content === prefix + 'coffee') {
     message.delete()
