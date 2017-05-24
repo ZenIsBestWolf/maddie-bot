@@ -26,12 +26,11 @@ client.on('message', message => {
       message.channel.send('http://prnt.sc/f893h0');
       console.log(message.author.tag + ' used ' + message.content);
   }
-  if (message.content === prefix + 'ripchatimg') {
-    if (message.guild === '165725395348357120') {
-      return
+  if (message.content === prefix + 'ripchat') {
+    if (message.guild === '317036338841124864') {
+      message.channel.send('Sorry! !ripchat is disabled in this Guild. Here\'s the information on the block:\n```Guild: TwoKinds Group Chat\nGuild ID: (165725395348357120)\nRequester: Dust#0538\nReason: Previous spam.```')
     }
     else {
-
     message.delete()
     message.channel.send('https://prnt.sc/f8lyf9');
     console.log(message.author.tag + ' used ' + message.content);
