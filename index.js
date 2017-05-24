@@ -15,7 +15,6 @@ client.on('message', message => {
     message.channel.send('http://prntscr.com/f7kpom');
     console.log(message.author.tag + ' used ' + message.content);
     }
-  }
   if (message.content === prefix + 'help') {
     message.delete()
     message.reply('check your DMs!');
