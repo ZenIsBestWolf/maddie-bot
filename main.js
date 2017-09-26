@@ -31,7 +31,6 @@ client.on('message', message => {
     message.channel.send('https://prnt.sc/f8lyf9');
     console.log(message.author.tag + ' used ' + message.content);
     }
-  }
   if (message.content === prefix + 'coffee') {
     message.delete()
     message.channel.send('https://media.giphy.com/media/b4Lyqm2nSdUze/giphy.gif');
