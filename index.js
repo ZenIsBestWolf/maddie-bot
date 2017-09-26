@@ -18,7 +18,7 @@ client.on('message', message => {
   if (message.content === prefix + 'help') {
     message.delete()
     message.reply('check your DMs!');
-    message.author.send('Here\'s the list of commands!\n ```\n!ripchat - (Formally !ripchatimg) Sends an image grieving over the chat, from the TwoKinds Group Chat discord server.\n!blanket - If someone\'s cold, not anymore!\n!help - Display\'s THIS message.\n!triforce - The triforce of bed!\n!coffee - When someone\'s hyper.\n!triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n!mocha - The saviour of lack of sleep and replenisher of energy!\n!source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.\n!angrykeith - A picture of the character Keith, from TwoKinds, very angry!\n!okevals - The good ol\' OK from Evals!\n!plottwister - Hey, watch it! That\'s my exposition!\n!beaned - friccin beaned kiddo.\n!blush - Oh the flattery!\n!smug - For when you took that extra cookie from the jar.\n!boi - U WAT BOI!?\n!shook - Similar meaning to !triggered, but less intense.\n!embarrassedmike - Whoopsies!\n!embarrassedkatvals - the same as !embarrassedmike but with a different person.\n!really - Just really?\n!excusemewat - bruh watchu say???\n!saywatnow - Similar to !excusemewat.\n!brainfart - Quick! I need some brain-fart laxitive!\n!rekt LOL XD FREAKING REKT KIDDO\n!anyonethere - Hello. It\'s me. I was wonderin if anyone was here after all these minutes.\n!embarrassedkeith - same as !embarrassedmike, just a different character.\n!smug2 - Similar to !smug.\n!satisfaction - When you\'re all too satisfied.\n!profanity - Send this to those who swear too much.\n!invite - DMs you an invite link to add me to your server!```More coming!');
+    message.author.send('Here\'s the list of commands!\n ```\n!ripchat - (Formally !ripchatimg) Sends an image grieving over the chat, from the TwoKinds Group Chat discord server.\n!blanket - If someone\'s cold, not anymore!\n!help - Display\'s THIS message.\n!triforce - The triforce of bed!\n!coffee - When someone\'s hyper.\n!triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n!source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.\n!angrykeith - A picture of the character Keith, from TwoKinds, very angry!\n!okevals - The good ol\' OK from Evals!\n!plottwister - Hey, watch it! That\'s my exposition!\n!beaned - friccin beaned kiddo.\n!blush - Oh the flattery!\n!smug - For when you took that extra cookie from the jar.\n!boi - U WAT BOI!?\n!shook - Similar meaning to !triggered, but less intense.\n!embarrassedmike - Whoopsies!\n!embarrassedkatvals - the same as !embarrassedmike but with a different person.\n!really - Just really?\n!excusemewat - bruh watchu say???\n!saywatnow - Similar to !excusemewat.\n!brainfart - Quick! I need some brain-fart laxitive!\n!rekt LOL XD FREAKING REKT KIDDO\n!anyonethere - Hello. It\'s me. I was wonderin if anyone was here after all these minutes.\n!embarrassedkeith - same as !embarrassedmike, just a different character.\n!smug2 - Similar to !smug.\n!satisfaction - When you\'re all too satisfied.\n!profanity - Send this to those who swear too much.\n!invite - DMs you an invite link to add me to your server!```More coming!');
     console.log(message.author.tag + ' used ' + message.content);
   }
   if (message.content === prefix + 'triforce') {
@@ -41,11 +41,6 @@ client.on('message', message => {
     message.channel.send('https://media.giphy.com/media/xUA7b7lt0fKp7wVm4o/giphy.gif');
     console.log(message.author.tag + ' used ' + message.content);
   }
-  if (message.content === prefix + 'mocha') {
-		message.delete()
-    message.channel.send('https://prnt.sc/f9nnin');
-    console.log(message.author.tag + ' used ' + message.content);
-	}
   if (message.content === prefix + 'source') {
       message.delete()
       message.reply(' the source code is on GitHub and is written by Zen \(ZenIsBestWolf#0446\) Here\'s the link to the repository: https://github.com/ZenIsBestWolf/maddie-bot');
