@@ -1,5 +1,0 @@
-// If you are to use this, rename this file to token.json! The name is different so my .gitignore will allow it to be commited. :}
-
-{
-  "token":"TOKEN_HERE"
-}
