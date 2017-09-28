@@ -148,7 +148,7 @@ client.on('message', message => {
   }
   if (message.content === prefix + 'invite') {
 	  message.delete()
-	  message.channel.reply(' check your DMs for an invite link!')
+	  message.reply(' check your DMs for an invite link!')
 	  message.author.send('If you want to get ME in YOUR server, go HERE: https://discordapp.com/oauth2/authorize?client_id=362327458554445865&scope=bot&permissions=125952\nPlease don\'t change the perms, I need these to run properly!')
   }
 });
