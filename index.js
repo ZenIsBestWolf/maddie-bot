@@ -16,7 +16,7 @@ client.on('message', message => {
   if (message.author.bot) return;
   if (command === 'help') {
     message.delete()
-    message.author.send('Here\'s the list of commands!\n ```\n!ripchat - (Formally !ripchatimg) Sends an image grieving over the chat, from the TwoKinds Group Chat discord server.\n!blanket - If someone\'s cold, not anymore!\n!help - Display\'s THIS message.\n!triforce - The triforce of bed!\n!coffee - When someone\'s hyper.\n!triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n!source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.\n!angrykeith - A picture of the character Keith, from TwoKinds, very angry!\n!okevals - The good ol\' OK from Evals!\n!plottwister - Hey, watch it! That\'s my exposition!\n!beaned - friccin beaned kiddo.\n!smug - For when you took that extra cookie from the jar.\n!boi - U WAT BOI!?\n!shook - Similar meaning to !triggered, but less intense.\n!embarrassedmike - Whoopsies!\n!embarrassedkat - the same as !embarrassedmike but with a different person.\n!really - Just really?\n!derp - herpa derp\n!rekt LOL XD FREAKING REKT KIDDO\n!wat - wait wat\n!embarrassedkeith - same as !embarrassedmike, just a different character.\n!smug2 - Similar to !smug.\n!profanity - Send this to those who swear too much.\n!invite - DMs you an invite link to add me to your server!\n!ches - no one!!1!\n!superhappy - HOORAY YAY OMG YAS```DM ZenIsBestWolf#0446 with all of your suggestions!');
+    message.author.send('Here\'s the list of commands!\n ```\n!ripchat - (Formally !ripchatimg) Sends an image grieving over the chat, from the TwoKinds Group Chat discord server.\n!blanket - If someone\'s cold, not anymore!\n!help - Display\'s THIS message.\n!triforce - The triforce of bed!\n!coffee - When someone\'s hyper.\n!triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n!source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.\n!angrykeith - A picture of the character Keith, from TwoKinds, very angry!\n!okevals - The good ol\' OK from Evals!\n!plottwister - Hey, watch it! That\'s my exposition!\n!beaned - friccin beaned kiddo.\n!smug - For when you took that extra cookie from the jar.\n!boi - U WAT BOI!?\n!shook - Similar meaning to !triggered, but less intense.\n!embarrassedmike - Whoopsies!\n!embarrassedkat - the same as !embarrassedmike but with a different person.\n!really - Just really?\n!derp - herpa derp\n!rekt LOL XD FREAKING REKT KIDDO\n!wat - wait wat\n!embarrassedkeith - same as !embarrassedmike, just a different character.\n!smug2 - Similar to !smug.\n!profanity - Send this to those who swear too much.\n!invite - DMs you an invite link to add me to your server!\n!ches - no one!!1!\n!superhappy - HOORAY YAY OMG YAS\n!testserver  - Recieve an invite to the testing server, ask an admin for perms!```DM ZenIsBestWolf#0446 with all of your suggestions!');
     if (message.author.id === "183672121522782208") {
       message.author.send("Hi Zen!\nAdministrator Commands: ```" + prefix + "shutdown - Shutdown Maddie.\n" + prefix + "chat [channel] [message] - Chats the message as this bot, in the specified channel. BE CAREFUL! Invalid channel WILL break Maddie.\n" + prefix + "log [message] - Logs the message into the logs.```")
     };
@@ -65,6 +65,11 @@ client.on('message', message => {
     message.delete()
     message.channel.send({file: './src/triggered.gif'})
     return;
+  }
+  if (command === 'testserver') {
+    message.delete()
+    message.reply(' check your DMs for more information!')
+    message.author.send('To join the test server, simply click here and tag one of the admins! https://discord.gg/Vbr8n7R')
   }
   message.channel.send({file: './src/' + command + '.png'})
     .then(messsage => message.delete());
