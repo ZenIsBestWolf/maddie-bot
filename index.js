@@ -6,10 +6,12 @@ client.on('ready' ,() => {
   console.log('Online. The default global prefix is: ' + prefix) + '.';
   client.user.setGame('with Landen\'s coffee!');
 });
-
+process.on('unhandledRejection', console.error);
 var prefix = '!';
 
 client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  if (message.author.bot) return;
   if (message.content === prefix + 'blanket') {
     message.delete()
     message.channel.send('http://prntscr.com/f7kpom');
