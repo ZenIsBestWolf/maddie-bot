@@ -51,10 +51,12 @@ client.on('message', message => {
     message.delete()
 	  message.reply(' check your DMs for an invite link!')
 	  message.author.send('If you want to get ME in YOUR server, go HERE: https://discordapp.com/oauth2/authorize?client_id=362327458554445865&scope=bot&permissions=125952\nPlease don\'t change the perms, I need these to run properly!')
+    return;
   }
   if (command === 'source') {
     message.delete()
     message.reply(' the source code is on GitHub and is written by Zen \(ZenIsBestWolf#0446\) Here\'s the link to the repository: https://github.com/ZenIsBestWolf/maddie-bot');
+    return;
   }
   if (command === 'coffee') {
     message.delete()
@@ -70,6 +72,7 @@ client.on('message', message => {
     message.delete()
     message.reply(' check your DMs for more information!')
     message.author.send('To join the test server, simply click here and tag one of the admins! https://discord.gg/Vbr8n7R')
+    return;
   }
   message.channel.send({file: './src/' + command + '.png'})
     .then(messsage => message.delete());
