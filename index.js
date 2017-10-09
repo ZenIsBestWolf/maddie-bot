@@ -8,7 +8,28 @@ client.on('ready' ,() => {
 process.on('unhandledRejection', console.error);
 var prefix = '!';
 var zen = "183672121522782208"
-
+var jc = "359539469231063052"
+var lg = "359538295375659010"
+client.on('guildMemberAdd', member => {
+  let guild = member.guild;
+  if (guild.id === lg) {
+    guild.channels.get(jc).send("User "+ member + " has joined.")
+  };
+  return;
+});
+client.on('guildMemberRemove', member => {
+  let guild = member.guild;
+  if (guild.id === lg) {
+    guild.channels.get(jc).send("User "+ member + " has left.")
+  };
+  return;
+});
+client.on('guildBanAdd',(guild, user) => {
+  if (guild.id === lg) {
+    guild.channels.get(jc).send("User "+ user + " has been banned.")
+  };
+  return;
+});
 client.on('message', message => {
   var unfilteredcommand = message.content.substring(prefix.length).split(' ')
   var command = unfilteredcommand[0].toLowerCase()
