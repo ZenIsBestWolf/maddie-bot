@@ -122,6 +122,6 @@ client.on('message', message => {
     return;
   };
   message.channel.send({file: './src/' + command + '.png'})
-    .then(message => message.delete());
+    .then(messsage => message.delete());
 });
 client.login(token);
