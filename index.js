@@ -96,10 +96,11 @@ client.on('message', message => {
 		};
 		return;
 	};
-	if (comman === 'lenny') {
+	if (command === 'lenny') {
 		message.channel.send('( ͡° ͜ʖ ͡°)')
 		message.delete()
-	}
+		return;
+	};
 	message.channel.send({
 		file: './src/' + command + '.png'
 	}).then(e => message.delete());
