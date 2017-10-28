@@ -139,7 +139,7 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
-		case "prettygood420":
+		case "prettygood720": // temporary NEXY NO LEAKING PLZ
 			message.channel.send({
 				file: "./src/prettygood.jpg"
 			});
