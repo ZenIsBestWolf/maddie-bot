@@ -61,8 +61,34 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "help":
-			message.author.send("```!angrykeith\n!coffee\n!embarrassed\n!happy\!help\!jerks\n!kek\n!northkinds\n!profanity\n!really\n!rekt\n!ripchat\n!shhh\n!shook\n!smug\n!source\n!topkek\n!triforce\n!triggered\n!wat```\nHave suggestions? DM them to ZenIsBestWolf#0446!");
-			message.delete();
+		var helpEmbed = new Discord.RichEmbed()
+		.setTitle('Command List')
+		.setDescription('These commands are able to be used by everyone!')
+		.setColor(0x468499)
+		.addField('!angrykeith', 'Keith is angry, and so are you.')
+		.addField('!coffee', 'MUST. HAVE. COFFEE!!!')
+		.addField('!embarrassed', 'Did I send that...? Woops...')
+		.addField('!happy', 'Hooray!')
+		.addField('!help', 'Know the commands. It sends this very message!')
+		.addField('!jerks', 'Talk about rude!')
+		.addField('!kek', '\"I kek.\" - Aran Tuasko, 2017 (LOL but better!)')
+		.addField('!lenny', '( ͡° ͜ʖ ͡°)')
+		.addField('!northkinds', 'Neon...?')
+		.addField('!profanity', 'WATCH YOUR PROFANITY!!!')
+		.addField('!really', 'Really? Just really?')
+		.addField('!rekt', 'REKT BOI XDXDXDXDXD')
+		.addField('!ripchat','Recognize the chat being dead with this gravestone.')
+		.addField('!shhh', 'Be quiet, young one.')
+		.addField('!shook', 'Woah wait what just happened!?')
+		.addField('!smug', 'You took an extra cookie from the cookie jar and you KNOW IT!')
+		.addField('!source', 'Links ya to the source code of Maddie.')
+		.addField('!topkek', '!kek but different in one way or another. It\'s all preference.')
+		.addField('!triforce', 'The triforce of bed will tuck you in goodnight.')
+		.addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
+		.addField('!wat', 'Wait what.')
+		.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!')
+		message.author.send(helpEmbed)
+		message.delete();
 			break;
 		case "jerks":
 			message.channel.send({
@@ -169,6 +195,19 @@ client.on('message', message => {
 				var msg = args.join(' ').slice(args[0].length + args[1].length + 1)
 				client.channels.get(targ).send(msg);
 				message.delete();
+				break;
+			case "help":
+				var zenHelpEmbed = new Discord.RichEmbed()
+				.setTitle('Special Commands')
+				.setDescription('Special commands intended for Zen\'s use only.')
+				.setColor(0xDC143C)
+				.addField('!chat [message]', 'Chat [message] as Maddie in the channel that the command is sent in.')
+				.addField('!chatin [channel id] [message]', 'Chat in [channel id] with the message [message] as Maddie.')
+				.addField('!nick [nickname]', 'Sets Maddie\'s nickname in that server to [nickname].')
+				.addField('!perm [permission]', 'Checks if Maddie has [permission] in that guild.')
+				.addField('!shutdown', 'Shutdown Maddie.')
+				.setFooter('Hi Zen! :)');
+				message.author.send(zenHelpEmbed)
 				break;
 			case "nick":
 				var nick = args.join(' ').slice(args[0].length);
