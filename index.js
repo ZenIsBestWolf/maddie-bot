@@ -194,7 +194,7 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "triggered":
-			messgae.channel.send({
+			message.channel.send({
 				file: "./src/triggered.gif"
 			});
 			message.delete();
@@ -230,7 +230,8 @@ client.on('message', message => {
 				.addField('!perm [permission]', 'Checks if Maddie has [permission] in that guild.')
 				.addField('!shutdown', 'Shutdown Maddie.')
 				.setFooter('Hi Zen! :)', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp');
-				message.author.send(zenHelpEmbed)
+				message.author.send(zenHelpEmbed);
+				message.delete();
 				break;
 			case "nick":
 				var nick = args.join(' ').slice(args[0].length);
