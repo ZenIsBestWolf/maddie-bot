@@ -55,7 +55,7 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "happy":
-			messgae.channel.send({
+			message.channel.send({
 				file: "./src/happy.png"
 			});
 			message.delete();
