@@ -32,10 +32,36 @@ client.on('message', message => {
 	if (message.author.bot) return;
 	var args = message.content.substring(prefix.length).split(" ");
 	var embarrassedarray = ["./src/embarrassed/embarrassedkat.png", "./src/embarrassed/embarrassedmike.png", "./src/embarrassed/embarrassedkeith.png"];
-	var kekarray = ["./src/kek/kekzen.png" // This is so in the future when I get more KEK images, I can just add them with ease.
+	var kekarray = [
+		"./src/kek/kekzen.png",
+		"./src/kek/kekkaren.png"
 	];
 	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png"];
 	switch (args[0]) {
+		case "about":
+			var aboutEmbed = new Discord.RichEmbed()
+			.setThumbnail(client.user.avatarURL)
+			.setTitle('Maddie')
+			.setColor(0xEE9A00)
+			.setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.')
+			.addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot')
+			.addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.')
+			.setFooter('Created by ZenIsBestWolf#0446', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			message.channel.send(aboutEmbed)
+			message.delete();
+			break;
+		case "aboutcreator":
+			var creatorEmbed = new Discord.RichEmbed()
+			.setThumbnail('https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			.setTitle('About the Creator')
+			.setDescription('Everything to know about the creator.')
+			.setColor(0x8B0000)
+			.addField('Zen', 'ZenIsBestWolf#0446')
+			.addField('Why I made Maddie.', 'I wanted to try to make a Discord bot of my own after seeing someone elses bot in another server that has similar functions.')
+			.addField('About Zen', '***no***')
+			.setFooter('DM ZenIsBestWolf with questions or command ideas!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			message.channel.send(creatorEmbed)
+			break;
 		case "angrykeith":
 			message.channel.send({
 				file: "./src/angrykeith.png"
@@ -61,34 +87,35 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "help":
-		var helpEmbed = new Discord.RichEmbed()
-		.setTitle('Command List')
-		.setDescription('These commands are able to be used by everyone!')
-		.setColor(0x468499)
-		.addField('!angrykeith', 'Keith is angry, and so are you.')
-		.addField('!coffee', 'MUST. HAVE. COFFEE!!!')
-		.addField('!embarrassed', 'Did I send that...? Woops...')
-		.addField('!happy', 'Hooray!')
-		.addField('!help', 'Know the commands. It sends this very message!')
-		.addField('!jerks', 'Talk about rude!')
-		.addField('!kek', '\"I kek.\" - Aran Tuasko, 2017 (LOL but better!)')
-		.addField('!lenny', '( ͡° ͜ʖ ͡°)')
-		.addField('!northkinds', 'Neon...?')
-		.addField('!profanity', 'WATCH YOUR PROFANITY!!!')
-		.addField('!really', 'Really? Just really?')
-		.addField('!rekt', 'REKT BOI XDXDXDXDXD')
-		.addField('!ripchat','Recognize the chat being dead with this gravestone.')
-		.addField('!shhh', 'Be quiet, young one.')
-		.addField('!shook', 'Woah wait what just happened!?')
-		.addField('!smug', 'You took an extra cookie from the cookie jar and you KNOW IT!')
-		.addField('!source', 'Links ya to the source code of Maddie.')
-		.addField('!topkek', '!kek but different in one way or another. It\'s all preference.')
-		.addField('!triforce', 'The triforce of bed will tuck you in goodnight.')
-		.addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
-		.addField('!wat', 'Wait what.')
-		.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!')
-		message.author.send(helpEmbed)
-		message.delete();
+			var helpEmbed = new Discord.RichEmbed()
+			.setTitle('Command List')
+			.setDescription('These commands are able to be used by everyone!')
+			.setColor(0x468499)
+			.addField('!about', 'Everything you need to know about Maddie.')
+			.addField('!aboutcreator', 'Stuff about Zen.')
+			.addField('!angrykeith', 'Keith is angry, and so are you.')
+			.addField('!coffee', 'MUST. HAVE. COFFEE!!!')
+			.addField('!embarrassed', 'Did I send that...? Woops...')
+			.addField('!happy', 'Hooray!')
+			.addField('!help', 'Know the commands. It sends this very message!')
+			.addField('!jerks', 'Talk about rude!')
+			.addField('!kek', '\"I kek.\" - Aran Tuasko, 2017 (LOL but better!)')
+			.addField('!lenny', '( ͡° ͜ʖ ͡°)')
+			.addField('!northkinds', 'Neon...?')
+			.addField('!profanity', 'WATCH YOUR PROFANITY!!!')
+			.addField('!really', 'Really? Just really?')
+			.addField('!rekt', 'REKT BOI XDXDXDXDXD')
+			.addField('!ripchat','Recognize the chat being dead with this gravestone.')
+			.addField('!shhh', 'Be quiet, young one.')
+			.addField('!shook', 'Woah wait what just happened!?')
+			.addField('!smug', 'You took an extra cookie from the cookie jar and you KNOW IT!')
+			.addField('!topkek', '!kek but different in one way or another. It\'s all preference.')
+			.addField('!triforce', 'The triforce of bed will tuck you in goodnight.')
+			.addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
+			.addField('!wat', 'Wait what.')
+			.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			message.author.send(helpEmbed)
+			message.delete();
 			break;
 		case "jerks":
 			message.channel.send({
@@ -154,10 +181,6 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
-		case "source":
-			message.reply("Maddie is open sourced bot by ZenIsBestWolf, and is free to modify on GitHub. Check her repository out here: https://github.com/ZenIsBestWolf/maddie-bot.");
-			message.delete();
-			break;
 		case "topkek":
 			message.channel.send({
 				file: "./src/topkek.png"
@@ -200,13 +223,13 @@ client.on('message', message => {
 				var zenHelpEmbed = new Discord.RichEmbed()
 				.setTitle('Special Commands')
 				.setDescription('Special commands intended for Zen\'s use only.')
-				.setColor(0xDC143C)
+				.setColor(0x8B0000)
 				.addField('!chat [message]', 'Chat [message] as Maddie in the channel that the command is sent in.')
 				.addField('!chatin [channel id] [message]', 'Chat in [channel id] with the message [message] as Maddie.')
 				.addField('!nick [nickname]', 'Sets Maddie\'s nickname in that server to [nickname].')
 				.addField('!perm [permission]', 'Checks if Maddie has [permission] in that guild.')
 				.addField('!shutdown', 'Shutdown Maddie.')
-				.setFooter('Hi Zen! :)');
+				.setFooter('Hi Zen! :)', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp');
 				message.author.send(zenHelpEmbed)
 				break;
 			case "nick":
