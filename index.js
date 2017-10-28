@@ -139,6 +139,12 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
+		case "prettygood420":
+			message.channel.send({
+				file: "./src/prettygood.jpg"
+			});
+			message.delete();
+			break;
 		case "profanity":
 			message.channel.send({
 				file: "./src/profanity.png"
