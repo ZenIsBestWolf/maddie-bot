@@ -37,6 +37,7 @@ client.on('message', message => {
 		"./src/kek/kekkaren.png"
 	];
 	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png"];
+	var prettygoodcmd = process.env.PRETTYGOOD;
 	switch (args[0]) {
 		case "about":
 			var aboutEmbed = new Discord.RichEmbed()
@@ -143,7 +144,11 @@ client.on('message', message => {
 			message.reply("no")
 			message.delete();
 			break;
-		case "prettygood720": // temporary NEXY NO LEAKING PLZ
+		case "prettygood720": // temp
+			message.reply("also no")
+			message.delete();
+			break;
+		case prettygoodcmd: // temporary NEXY NO LEAKING PLZ
 			message.channel.send({
 				file: "./src/prettygood.jpg"
 			});
