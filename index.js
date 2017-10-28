@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var token = proccess.env.TOKEN;
+var token = process.env.TOKEN;
 client.on('ready', () => {
 	console.log('Online. The default global prefix is: ' + prefix);
 	client.user.setGame('with Landen\'s coffee!');
