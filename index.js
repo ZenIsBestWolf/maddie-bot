@@ -1,15 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var token = process.env.TOKEN;
+var token = proccess.env.TOKEN;
 client.on('ready', () => {
 	console.log('Online. The default global prefix is: ' + prefix);
 	client.user.setGame('with Landen\'s coffee!');
 });
 process.on('unhandledRejection', console.error);
 var prefix = '!';
-var zen = "183672121522782208"
-var jc = "359539469231063052"
-var lg = "359538295375659010"
+var zen = "183672121522782208";
+var jc = "359539469231063052";
+var lg = "359538295375659010";
 client.on('guildMemberAdd', member => {
 	let guild = member.guild;
 	if (guild.id === lg) {
@@ -30,79 +30,169 @@ client.on('guildBanAdd', (guild, user) => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
-	var unfilteredcommand = message.content.substring(prefix.length).split(' ')
-	var command = unfilteredcommand[0].toLowerCase()
-	var args = unfilteredcommand.join(' ').slice(4)
-	if (command === 'help') {
-		message.delete()
-		message.author.send('Here\'s the list of commands!\n ```\n!ripchat - Sends an image grieving over the chat, from the TwoKinds Group Chat discord server.\n!help - Display\'s THIS message.\n!triforce - The triforce of bed!\n!coffee - When someone\'s hyper.\n!triggered - If someone says \"Alot\" or any other things that trigger you, use this.\n!source - Links you to the GitHub where Maddie\'s code is, since she\'s open source.\n!angrykeith - A picture of the character Keith, from TwoKinds, very angry!\n!smug - For when you took that extra cookie from the jar.\n!shook - Similar meaning to !triggered, but less intense.\n!embarrassedmike - Whoopsies!\n!embarrassedkat - the same as !embarrassedmike but with a different person.\n!really - Just really?\n!rekt LOL XD FREAKING REKT KIDDO\n!wat - wait wat\n!embarrassedkeith - same as !embarrassedmike, just a different character.\n!smug2 - Similar to !smug.\n!profanity - Send this to those who swear too much.\n!superhappy - HOORAY YAY OMG YAS\n!jerks - meanies >:(\n!kek - K E K\n!shhh - (3 h\'s) SHUTUP but subtle.\n!topkek - pretty much !kek but its not.\n!northkinds - Neon...?\n!lenny ( ͡° ͜ʖ ͡°)```DM ZenIsBestWolf#0446 with all of your suggestions for commands!');
-		if (message.author.id === zen) {
-			message.author.send("Hi Zen!\nAdministrator Commands: ```" + prefix + "shutdown - Shutdown Maddie.\n" + prefix + "chat [channel] [message] - Chats the message as this bot, in the specified channel. BE CAREFUL! Invalid channel WILL break Maddie.\n" + prefix + "nick [nickname] - Set's nickname of bot to [nickname].\n" + prefix + "perm [permission] - Checks if Maddie has [permission] in that server.```")
-		};
-		return;
-	};
-	if (command === 'shutdown') {
-		if (message.author.id === zen) {
-			message.reply("Process is exiting.")
-			process.exit();
-			return;
-		}
-		return;
-	};
-	if (command === 'chat') {
-		if (message.author.id === zen) {
-			var chantar = unfilteredcommand[1]
-			var chtmsg = unfilteredcommand.join(' ').slice(chantar.length + 5)
-			client.channels.get(chantar).send(chtmsg)
+	var args = message.content.substring(prefix.length).split(" ");
+	var embarrassedarray = ["./src/embarrassed/embarrassedkat.png", "./src/embarrassed/embarrassedmike.png", "./src/embarrassed/embarrassedkeith.png"];
+	var kekarray = ["./src/kek/kekzen.png" // This is so in the future when I get more KEK images, I can just add them with ease.
+	];
+	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png"];
+	switch (args[0]) {
+		case "angrykeith":
+			message.channel.send({
+				file: "./src/angrykeith.png"
+			});
 			message.delete();
-			return;
-		}
-		return;
+			break;
+		case "coffee":
+			message.channel.send({
+				file: "./src/coffee.gif"
+			});
+			message.delete();
+			break;
+		case "embarrassed":
+			message.channel.send({
+				file: embarrassedarray[Math.floor(Math.random() * embarrassedarray.length)]
+			});
+			message.delete();
+			break;
+		case "happy":
+			messgae.channel.send({
+				file: "./src/happy.png"
+			});
+			message.delete();
+			break;
+		case "help":
+			message.author.send("```!angrykeith\n!coffee\n!embarrassed\n!happy\!help\!jerks\n!kek\n!northkinds\n!profanity\n!really\n!rekt\n!ripchat\n!shhh\n!shook\n!smug\n!source\n!topkek\n!triforce\n!triggered\n!wat```\nHave suggestions? DM them to ZenIsBestWolf#0446!");
+			message.delete();
+			break;
+		case "jerks":
+			message.channel.send({
+				file: "./src/jerks.png"
+			});
+			message.delete();
+			break;
+		case "kek":
+			message.channel.send({
+				file: kekarray[Math.floor(Math.random() * kekarray.length)]
+			});
+			message.delete();
+			break;
+		case "lenny":
+			message.channel.send("( ͡° ͜ʖ ͡°)");
+			message.delete();
+			break;
+		case "northkinds":
+			message.channel.send({
+				file: "./src/northkinds.png"
+			});
+			message.delete();
+			break;
+		case "profanity":
+			message.channel.send({
+				file: "./src/profanity.png"
+			});
+			message.delete();
+			break;
+		case "really":
+			message.channel.send({
+				file: "./src/really.png"
+			});
+			message.delete();
+			break;
+		case "rekt":
+			message.channel.send({
+				file: "./src/rekt.png"
+			});
+			message.delete();
+			break;
+		case "ripchat":
+			message.channel.send({
+				file: "./src/ripchat.png"
+			});
+			message.delete();
+			break;
+		case "shhh":
+			message.channel.send({
+				file: "./src/shhh.png"
+			});
+			message.delete();
+			break;
+		case "shook":
+			message.channel.send({
+				file: "./src/shook.png"
+			});
+			message.delete();
+			break;
+		case "smug":
+			message.channel.send({
+				file: smugarray[Math.floor(Math.random() * smugarray.length)]
+			});
+			message.delete();
+			break;
+		case "source":
+			message.reply("Maddie is open sourced bot by ZenIsBestWolf, and is free to modify on GitHub. Check her repository out here: https://github.com/ZenIsBestWolf/maddie-bot.");
+			message.delete();
+			break;
+		case "topkek":
+			message.channel.send({
+				file: "./src/topkek.png"
+			});
+			message.delete();
+			break;
+		case "triforce":
+			message.channel.send({
+				file: "./src/triforce.png"
+			});
+			message.delete();
+			break;
+		case "triggered":
+			messgae.channel.send({
+				file: "./src/triggered.gif"
+			});
+			message.delete();
+			break;
+		case "wat":
+			message.channel.send({
+				file: "./src/wat.png"
+			});
+			message.delete();
+			break;
 	};
-	if (command === 'source') {
-		message.reply(' the source code is on GitHub and is written by Zen \(ZenIsBestWolf#0446\) Here\'s the link to the repository: https://github.com/ZenIsBestWolf/maddie-bot');
-		message.delete()
-		return;
-	}
-	if (command === 'coffee') {
-		message.channel.send({
-			file: './src/coffee.gif'
-		})
-		message.delete()
-		return;
-	}
-	if (command === 'triggered') {
-		message.channel.send({
-			file: './src/triggered.gif'
-		})
-		message.delete()
-		return;
-	};
-	if (command === 'nick') {
-    if(message.author.id === zen) {
-    message.delete()
-		message.guild.me.setNickname(args)
-		return;
-	}};
-	if (command === 'perm') {
-		if (message.author.id === zen) {
-			var ch_perm = unfilteredcommand[1]
-			if (message.guild.me.hasPermission(ch_perm)) {
-				message.reply("True.")
-				return;
-			};
-			message.reply("False.")
-			return;
+	if (message.author.id === zen) {
+		switch (args[0]) {
+			case "chat":
+				var msg = args.join(' ').slice(args[0].length);
+				message.channel.send(msg);
+				message.delete();
+				break;
+			case "chatin":
+				var targ = args[1]
+				var msg = args.join(' ').slice(args[0].length + args[1].length + 1)
+				client.channels.get(targ).send(msg);
+				message.delete();
+				break;
+			case "nick":
+				var nick = args.join(' ').slice(args[0].length);
+				message.guild.me.setNickname(nick);
+				message.delete();
+				break;
+			case "perm":
+				var perm = args[1];
+				if (message.guild.me.hasPermission(perm)) {
+					message.reply("True.").then(e => setTimeout(function() {
+						e.delete();
+					}, 10000));
+					message.delete();
+				} else {
+					message.reply("False.").then(e => setTimeout(function() {
+						e.delete();
+					}, 10000));
+					message.delete()
+				};
+				break;
+			case "shutdown":
+				process.exit();
+				break;
 		};
-		return;
 	};
-	if (command === 'lenny') {
-		message.channel.send('( ͡° ͜ʖ ͡°)')
-		message.delete()
-		return;
-	};
-	message.channel.send({
-		file: './src/' + command + '.png'
-	}).then(e => message.delete());
 });
 client.login(token);

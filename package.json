@@ -1,6 +1,6 @@
 {
   "name": "maddie-bot",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Maddie Bot, my little bot that teaches me so much. (Oh and it provides laughs for others C:)",
   "main": "index.js",
   "scripts": {
