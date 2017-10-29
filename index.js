@@ -234,13 +234,6 @@ client.on('message', message => {
 				client.channels.get(targ).send(msg);
 				message.delete();
 				break;
-			case "guilds":
-				//if (!client.guild.id === "359538295375659010", "362329135126937610", "365242521208750091") {
-					//client.channels.get("").send("Leaving " + client.guild)
-					//client.guild.leave()
-				//};
-				console.log(client.guilds) // temp
-				break;
 			case "help":
 				var zenHelpEmbed = new Discord.RichEmbed()
 				.setTitle('Special Commands')
