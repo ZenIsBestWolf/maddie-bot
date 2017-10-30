@@ -37,7 +37,7 @@ client.on('message', message => {
 		"./src/kek/kekkaren.png"
 	];
 	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png"];
-	//var prettygoodcmd = process.env.PRETTYGOOD; LINE 150
+	//var prettygoodcmd = process.env.PRETTYGOOD; LINE 157
 	switch (args[0]) {
 		case "about":
 			var aboutEmbed = new Discord.RichEmbed()
@@ -102,6 +102,7 @@ client.on('message', message => {
 			.addField('!jerks', 'Talk about rude!')
 			.addField('!kek', '\"I kek.\" - Aran Tuasko, 2017 (LOL but better!)')
 			.addField('!lenny', '( ͡° ͜ʖ ͡°)')
+			.addField('!newcommand', 'For that good reaction.')
 			.addField('!northkinds', 'Neon...?')
 			.addField('!profanity', 'WATCH YOUR PROFANITY!!!')
 			.addField('!really', 'Really? Just really?')
@@ -113,7 +114,7 @@ client.on('message', message => {
 			.addField('!topkek', '!kek but different in one way or another. It\'s all preference.')
 			.addField('!triforce', 'The triforce of bed will tuck you in goodnight.')
 			.addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
-			.addField('!wat', 'Wait what.')
+			.addField('!wat', 'Wait what?')
 			.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
 			message.author.send(helpEmbed)
 			message.delete();
@@ -132,6 +133,12 @@ client.on('message', message => {
 			break;
 		case "lenny":
 			message.channel.send("( ͡° ͜ʖ ͡°)");
+			message.delete();
+			break;
+		case "newcommand":
+			message.channel.send({
+				file: "./src/newcommand.png"
+			});
 			message.delete();
 			break;
 		case "northkinds":
