@@ -31,12 +31,19 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
 	var args = message.content.substring(prefix.length).split(" ");
-	var embarrassedarray = ["./src/embarrassed/embarrassedkat.png", "./src/embarrassed/embarrassedmike.png", "./src/embarrassed/embarrassedkeith.png"];
+	var embarrassedarray = [
+		"./src/embarrassed/embarrassedkat.png",
+		"./src/embarrassed/embarrassedmike.png",
+		"./src/embarrassed/embarrassedkeith.png"
+	];
 	var kekarray = [
 		"./src/kek/kekzen.png",
 		"./src/kek/kekkaren.png"
 	];
-	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png"];
+	var smugarray = [
+		"./src/smug/smugzen.png",
+		"./src/smug/smugflora.png"
+	];
 	//var prettygoodcmd = process.env.PRETTYGOOD; LINE 157
 	switch (args[0]) {
 		case "about":
@@ -100,7 +107,7 @@ client.on('message', message => {
 			.addField('!happy', 'Hooray!')
 			.addField('!help', 'Know the commands. It sends this very message!')
 			.addField('!jerks', 'Talk about rude!')
-			.addField('!kek', '\"I kek.\" - Aran Tuasko, 2017 (LOL but better!)')
+			.addField('!kek', '\"I kek.\" - Aran Tukasko, 2017 (LOL but better!)')
 			.addField('!lenny', '( ͡° ͜ʖ ͡°)')
 			.addField('!newcommand', 'For that good reaction.')
 			.addField('!northkinds', 'Neon...?')
