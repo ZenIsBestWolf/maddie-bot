@@ -76,6 +76,12 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
+		case "boi":
+			message.channel.send({
+				file: "./src/boi.png"
+			});
+			message.delete()
+			break;
 		case "coffee":
 			message.channel.send({
 				file: "./src/coffee.gif"
@@ -102,6 +108,7 @@ client.on('message', message => {
 			.addField('!about', 'Everything you need to know about Maddie.')
 			.addField('!aboutcreator', 'Stuff about Zen.')
 			.addField('!angrykeith', 'Keith is angry, and so are you.')
+			.addField('!boi', 'When someone does something *that* stupid.')
 			.addField('!coffee', 'MUST. HAVE. COFFEE!!!')
 			.addField('!embarrassed', 'Did I send that...? Woops...')
 			.addField('!happy', 'Hooray!')
@@ -117,6 +124,7 @@ client.on('message', message => {
 			.addField('!ripchat','Recognize the chat being dead with this gravestone.')
 			.addField('!shhh', 'Be quiet, young one.')
 			.addField('!shook', 'Woah wait what just happened!?')
+			.addField('!slap', 'When someone does something ***so*** dumb, they need a slap in the face!')
 			.addField('!smug', 'You took an extra cookie from the cookie jar and you KNOW IT!')
 			.addField('!topkek', '!kek but different in one way or another. It\'s all preference.')
 			.addField('!triforce', 'The triforce of bed will tuck you in goodnight.')
@@ -203,6 +211,12 @@ client.on('message', message => {
 				file: "./src/shook.png"
 			});
 			message.delete();
+			break;
+		case "slap":
+			message.channel.send({
+				file: "./src/slap.png"
+			});
+			message.delete()
 			break;
 		case "smug":
 			message.channel.send({
