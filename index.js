@@ -88,6 +88,12 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
+		case "cuddles":
+			message.channel.send({
+				file: "./src/cuddles.jpg"
+			});
+			message.delete();
+			break;
 		case "embarrassed":
 			message.channel.send({
 				file: embarrassedarray[Math.floor(Math.random() * embarrassedarray.length)]
