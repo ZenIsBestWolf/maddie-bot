@@ -116,6 +116,7 @@ client.on('message', message => {
 			.addField('!angrykeith', 'Keith is angry, and so are you.')
 			.addField('!boi', 'When someone does something *that* stupid.')
 			.addField('!coffee', 'MUST. HAVE. COFFEE!!!')
+			.addField('!cuddles', 'low impact consensual cuddling')
 			.addField('!embarrassed', 'Did I send that...? Woops...')
 			.addField('!happy', 'Hooray!')
 			.addField('!help', 'Know the commands. It sends this very message!')
