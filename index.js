@@ -107,8 +107,8 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "help":
-			var helpEmbed = new Discord.RichEmbed()
-			.setTitle('Command List')
+			var helpEmbed1 = new Discord.RichEmbed()
+			.setTitle('Command List (1/2)')
 			.setDescription('These commands are able to be used by everyone!')
 			.setColor(0x468499)
 			.addField('!about', 'Everything you need to know about Maddie.')
@@ -124,6 +124,11 @@ client.on('message', message => {
 			.addField('!kek', '\"I kek.\" - Aran Tukasko, 2017 (LOL but better!)')
 			.addField('!lenny', '( ͡° ͜ʖ ͡°)')
 			.addField('!newcommand', 'For that good reaction.')
+			.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			var helpEmbed2 = new Discord.RichEmbed()
+			.setTitle('Command List (2/2)')
+			.setDescription('These commands are able to be used by everyone!')
+			.setColor(0x468499)
 			.addField('!northkinds', 'Neon...?')
 			.addField('!profanity', 'WATCH YOUR PROFANITY!!!')
 			.addField('!really', 'Really? Just really?')
@@ -138,7 +143,8 @@ client.on('message', message => {
 			.addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
 			.addField('!wat', 'Wait what?')
 			.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
-			message.author.send(helpEmbed)
+			message.author.send(helpEmbed1)
+			message.author.send(helpEmbed2)
 			message.delete();
 			break;
 		case "jerks":
