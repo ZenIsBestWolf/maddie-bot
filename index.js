@@ -42,10 +42,10 @@ client.on('message', message => {
 	];
 	var smugarray = [
 		"./src/smug/smugzen.png",
-		"./src/smug/smugflora.png"
+		"./src/smug/smugflora.png",
+		"./src/smug/smugkeith.png"
 	];
-	//var prettygoodcmd = process.env.PRETTYGOOD; LINE 157
-	switch (args[0]) {
+	switch (args[0].toLowerCase()) {
 		case "about":
 			var aboutEmbed = new Discord.RichEmbed()
 			.setThumbnail(client.user.avatarURL)
@@ -168,20 +168,6 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
-		//case "prettygood420": // temp
-			//message.reply("no")
-			//message.delete();
-			//break;
-		//case "prettygood720": // temp
-			//message.reply("also no")
-			//message.delete();
-			//break;                                                          Nexy ruined the fun of it so I let this sit here in remain.
-		//case prettygoodcmd: // temporary NEXY NO LEAKING PLZ
-			//message.channel.send({
-				//file: "./src/prettygood.jpg"
-			//});
-			//message.delete();
-			//break;
 		case "profanity":
 			message.channel.send({
 				file: "./src/profanity.png"
@@ -256,7 +242,7 @@ client.on('message', message => {
 			break;
 	};
 	if (message.author.id === zen) {
-		switch (args[0]) {
+		switch (args[0].toLowerCase()) {
 			case "chat":
 				var msg = args.join(' ').slice(args[0].length);
 				message.channel.send(msg);
