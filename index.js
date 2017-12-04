@@ -76,11 +76,17 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
+		case "beg":
+			message.channel.send({
+				file: "./src/beg.png"
+			});
+			message.delete();
+			break;
 		case "boi":
 			message.channel.send({
 				file: "./src/boi.png"
 			});
-			message.delete()
+			message.delete();
 			break;
 		case "coffee":
 			message.channel.send({
@@ -114,6 +120,7 @@ client.on('message', message => {
 			.addField('!about', 'Everything you need to know about Maddie.')
 			.addField('!aboutcreator', 'Stuff about Zen.')
 			.addField('!angrykeith', 'Keith is angry, and so are you.')
+			.addField('!beg', '*pwease* can i has one more cookie?')
 			.addField('!boi', 'When someone does something *that* stupid.')
 			.addField('!coffee', 'MUST. HAVE. COFFEE!!!')
 			.addField('!cuddles', 'low impact consensual cuddling')
