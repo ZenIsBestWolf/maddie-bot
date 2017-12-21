@@ -10,6 +10,8 @@ var prefix = '!';
 var zen = "183672121522782208";
 var jc = "359539469231063052";
 var lg = "359538295375659010";
+var modRoleName = "The Masks (Mods)";
+var introMSGID = "363037157272846336";
 client.on('guildMemberAdd', member => {
 	let guild = member.guild;
 	if (guild.id === lg) {
@@ -131,7 +133,7 @@ client.on('message', message => {
 			.addField('!kek', '\"I kek.\" - Aran Tukasko, 2017 (LOL but better!)')
 			.addField('!lenny', '( ͡° ͜ʖ ͡°)')
 			.addField('!newcommand', 'For that good reaction.')
-			.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			.setFooter('DM ZenIsBestWolf#9855 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp')
 			var helpEmbed2 = new Discord.RichEmbed()
 			.setTitle('Command List (2/2)')
 			.setDescription('These commands are able to be used by everyone!')
@@ -149,7 +151,7 @@ client.on('message', message => {
 			.addField('!triforce', 'The triforce of bed will tuck you in goodnight.')
 			.addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
 			.addField('!wat', 'Wait what?')
-			.setFooter('DM ZenIsBestWolf#0446 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			.setFooter('DM ZenIsBestWolf#9855 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp')
 			message.author.send(helpEmbed1)
 			message.author.send(helpEmbed2)
 			message.delete();
@@ -255,6 +257,32 @@ client.on('message', message => {
 			message.delete();
 			break;
 	};
+	if (message.member.roles.exists("name",modRoleName)) {
+		switch(args[0].toLowerCase()) {
+			case "help":
+				var modHelpEmbed = new Discord.RichEmbed()
+				.setTitle('Moderator Commands')
+				.setDescription('Special commands intended for Moderator use only.')
+				.setColor(0xFFC300)
+				.addField('!wipe', '(Will only work in #welcome!) Deletes all chat messages besides the intro message.')
+				.setFooter('Trouble with commands? Please message ZenIsBestWolf#9855.','https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp');
+				message.author.send(modHelpEmbed)
+				break;
+			case "wipe":
+				if (message.channel.id != '359538465542504448') {
+					message.reply("That command is only available in the #welcome channel.").then(e => setTimeout(function() {
+						e.delete()
+						message.delete()
+					}, 10000));
+					return;
+				};
+				message.channel.fetchMessages({after: introMSGID})
+				.then(messages => {
+					message.channel.bulkDelete(messages);
+				});
+				break;
+		};
+	};
 	if (message.author.id === zen) {
 		switch (args[0].toLowerCase()) {
 			case "chat":
@@ -278,7 +306,7 @@ client.on('message', message => {
 				.addField('!nick [nickname]', 'Sets Maddie\'s nickname in that server to [nickname].')
 				.addField('!perm [permission]', 'Checks if Maddie has [permission] in that guild.')
 				.addField('!shutdown', 'Shutdown Maddie.')
-				.setFooter('Hi Zen! :)', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp');
+				.setFooter('Hi Zen! :)', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp');
 				message.author.send(zenHelpEmbed);
 				message.delete();
 				break;
