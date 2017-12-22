@@ -38,12 +38,12 @@ client.on('message', message => {
 	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png", "./src/smug/smugkeith.png"];
 	switch (args[0].toLowerCase()) {
 		case "about":
-			var aboutEmbed = new Discord.RichEmbed().setThumbnail(client.user.avatarURL).setTitle('Maddie').setColor(0xEE9A00).setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.').addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot').addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.').setFooter('Created by ZenIsBestWolf#0446', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			var aboutEmbed = new Discord.RichEmbed().setThumbnail(client.user.avatarURL).setTitle('Maddie').setColor(0xEE9A00).setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.').addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot').addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.').setFooter('Created by ZenIsBestWolf#9855', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
 			message.channel.send(aboutEmbed)
 			message.delete();
 			break;
 		case "aboutcreator":
-			var creatorEmbed = new Discord.RichEmbed().setThumbnail('https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp').setTitle('About the Creator').setDescription('Everything to know about the creator.').setColor(0x8B0000).addField('Zen', 'ZenIsBestWolf#0446').addField('Why I made Maddie.', 'I wanted to try to make a Discord bot of my own after seeing someone elses bot in another server that has similar functions.').addField('About Zen', '***no***').setFooter('DM ZenIsBestWolf with questions or command ideas!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			var creatorEmbed = new Discord.RichEmbed().setThumbnail('https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp').setTitle('About the Creator').setDescription('Everything to know about the creator.').setColor(0x8B0000).addField('Zen', 'ZenIsBestWolf#9855').addField('Why I made Maddie.', 'I wanted to try to make a Discord bot of my own after seeing someone elses bot in another server that has similar functions.').addField('About Zen', '***no***').setFooter('DM ZenIsBestWolf#9855 with questions or command ideas!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
 			message.channel.send(creatorEmbed)
 			break;
 		case "angrykeith":
