@@ -10,8 +10,10 @@ var prefix = '!';
 var zen = "183672121522782208";
 var jc = "359539469231063052";
 var lg = "359538295375659010";
-var modRoleName = "The Masks (Mods)";
+var modRoleName = "Basitin Exiles (Mods)";
+var adminRoleName = "The Masks (Admins)";
 var introMSGID = "363037157272846336";
+var introChannel = "359538465542504448";
 client.on('guildMemberAdd', member => {
 	let guild = member.guild;
 	if (guild.id === lg) {
@@ -33,22 +35,28 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
 	var args = message.content.substring(prefix.length).split(" ");
-	var embarrassedarray = ["./src/embarrassed/embarrassedkat.png", "./src/embarrassed/embarrassedmike.png", "./src/embarrassed/embarrassedkeith.png"];
+	var embarrassedarray = ["./src/embarrassed/embarrassedkat.png", "./src/embarrassed/embarrassedmike.png", "./src/embarrassed/embarrassedkeith.png", "./src/embarrassed/embarrassedflora.png", "./src/embarrassed/embarrassednat1.png", "./src/embarrassed/embarrassednat2.png", "./src/embarrassed/embarrassednat3.png", "./src/embarrassed/embarrassedtrace.png"];
 	var kekarray = ["./src/kek/kekzen.png", "./src/kek/kekkaren.png"];
-	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png", "./src/smug/smugkeith.png"];
+	var smugarray = ["./src/smug/smugzen.png", "./src/smug/smugflora.png", "./src/smug/smugkeith.png", "./src/smug/smugnat.png"];
+	var reallyarray = ["./src/really/reallyflorasketch.png", "./src/really/reallyflorapage.png", "./src/really/reallynat.png", "./src/really/reallymaddie.png"];
+	var boobersarray = ["./src/boobers/boobers1.png", "./src/boobers/boobers2.png"];
+	var angryarray = ["./src/angry/angrykeith.png", "./src/angry/angrynat.png"]
+	var shockedarray = ["./src/shocked/shockedsythe.png", "./src/shocked/shockedflora.png"];
+	var hiddenCommandsEmbed = new Discord.RichEmbed().setTitle("Hidden Commands").setDescription("Hidden commands that don\'t show up in the normal help menu, and are only for fun.").setColor(0x696969).addField('!boobers', 'Nat and her boobs. >.>').addField("!hottie and !hotboy", "The same as !sing.").setFooter("Do not share these please! I want people to find them on their own.") // THIS COLOR CODE. AMAZING. I SWEAR I JUST GOOGLED GRAY COLOR CODES AND SAW THIS. NOT DISSAPOINTED!
 	switch (args[0].toLowerCase()) {
 		case "about":
-			var aboutEmbed = new Discord.RichEmbed().setThumbnail(client.user.avatarURL).setTitle('Maddie').setColor(0xEE9A00).setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.').addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot').addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.').setFooter('Created by ZenIsBestWolf#9855', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			var aboutEmbed = new Discord.RichEmbed().setThumbnail(client.user.avatarURL).setTitle('Maddie').setColor(0xEE9A00).setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.').addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot').addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.').setFooter('Created by ZenIsBestWolf#9855', './src/footer.jpg')
 			message.channel.send(aboutEmbed)
 			message.delete();
 			break;
 		case "aboutcreator":
-			var creatorEmbed = new Discord.RichEmbed().setThumbnail('https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp').setTitle('About the Creator').setDescription('Everything to know about the creator.').setColor(0x8B0000).addField('Zen', 'ZenIsBestWolf#9855').addField('Why I made Maddie.', 'I wanted to try to make a Discord bot of my own after seeing someone elses bot in another server that has similar functions.').addField('About Zen', '***no***').setFooter('DM ZenIsBestWolf#9855 with questions or command ideas!', 'https://cdn.discordapp.com/avatars/183672121522782208/98140e3be987939a4c527235a7f57fb0.webp')
+			var creatorEmbed = new Discord.RichEmbed().setThumbnail('./src/footer.jpg').setTitle('About the Creator').setDescription('Everything to know about the creator.').setColor(0x8B0000).addField('Zen', 'ZenIsBestWolf#9855').addField('Why I made Maddie.', 'I wanted to try to make a Discord bot of my own after seeing someone elses bot in another server that has similar functions.').addField('About Zen', '***no***').setFooter('DM ZenIsBestWolf#9855 with questions or command ideas!', './src/footer.jpg')
 			message.channel.send(creatorEmbed)
+			message.delete();
 			break;
-		case "angrykeith":
+		case "angry":
 			message.channel.send({
-				file: "./src/angrykeith.png"
+				file: angryarray[Math.floor(Math.random() * angryarray.length)]
 			});
 			message.delete();
 			break;
@@ -57,6 +65,13 @@ client.on('message', message => {
 				file: "./src/beg.png"
 			});
 			message.delete();
+			break;
+		case "boobers":
+			message.channel.send({
+				file: boobersarray[Math.floor(Math.random() * boobersarray.length)]
+			});
+			message.delete();
+			message.reply("GG! You found a hidden command!")
 			break;
 		case "boi":
 			message.channel.send({
@@ -82,6 +97,12 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
+		case "haha":
+			message.channel.send({
+				file: "./src/haha.png"
+			});
+			message.delete();
+			break;
 		case "happy":
 			message.channel.send({
 				file: "./src/happy.png"
@@ -89,11 +110,25 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "help":
-			var helpEmbed1 = new Discord.RichEmbed().setTitle('Command List (1/2)').setDescription('These commands are able to be used by everyone!').setColor(0x468499).addField('!about', 'Everything you need to know about Maddie.').addField('!aboutcreator', 'Stuff about Zen.').addField('!angrykeith', 'Keith is angry, and so are you.').addField('!beg', '*pwease* can i has one more cookie?').addField('!boi', 'When someone does something *that* stupid.').addField('!coffee', 'MUST. HAVE. COFFEE!!!').addField('!cuddles', 'low impact consensual cuddling').addField('!embarrassed', 'Did I send that...? Woops...').addField('!happy', 'Hooray!').addField('!help', 'Know the commands. It sends this very message!').addField('!jerks', 'Talk about rude!').addField('!kek', '\"I kek.\" - Aran Tukasko, 2017 (LOL but better!)').addField('!lenny', '( ͡° ͜ʖ ͡°)').addField('!newcommand', 'For that good reaction.').setFooter('DM ZenIsBestWolf#9855 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp')
-			var helpEmbed2 = new Discord.RichEmbed().setTitle('Command List (2/2)').setDescription('These commands are able to be used by everyone!').setColor(0x468499).addField('!northkinds', 'Neon...?').addField('!profanity', 'WATCH YOUR PROFANITY!!!').addField('!really', 'Really? Just really?').addField('!rekt', 'REKT BOI XDXDXDXDXD').addField('!ripchat', 'Recognize the chat being dead with this gravestone.').addField('!shhh', 'Be quiet, young one.').addField('!shook', 'Woah wait what just happened!?').addField('!slap', 'When someone does something ***so*** dumb, they need a slap in the face!').addField('!smug', 'You took an extra cookie from the cookie jar and you KNOW IT!').addField('!topkek', '!kek but different in one way or another. It\'s all preference.').addField('!triforce', 'The triforce of bed will tuck you in goodnight.').addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE').addField('!wat', 'Wait what?').setFooter('DM ZenIsBestWolf#9855 with suggestions for more commands!', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp')
+			var helpEmbed1 = new Discord.RichEmbed().setTitle('Command List (1/2)').setDescription('These commands are able to be used by everyone!').setColor(0x468499).addField('!about', 'Everything you need to know about Maddie.').addField('!aboutcreator', 'Stuff about Zen.').addField('!angry', 'AAAAAAAAAAAAAAAAAAAAAAAA').addField('!beg', '*pwease* can i has one more cookie?').addField('!boi', 'When someone does something *that* stupid.').addField('!coffee', 'MUST. HAVE. COFFEE!!!').addField('!cuddles', 'low impact consensual cuddling').addField('!embarrassed', 'Did I send that...? Woops...').addField('!haha', 'Nat giving us laughter of joy... or mockery. We\'re not sure.').addField('!happy', 'Hooray!').addField('!help', 'Know the commands. It sends this very message!').addField('!jerks', 'Talk about rude!').addField('!kek', '\"I kek.\" - Aran Tukasko, 2017 (LOL but better!)').addField('!lenny', '( ͡° ͜ʖ ͡°)').addField('!loreal', 'Nat advertising Loreal.').addField('!newcommand', 'For that good reaction.').setFooter('DM ZenIsBestWolf#9855 with suggestions for more commands!', './src/footer.jpg')
+			var helpEmbed2 = new Discord.RichEmbed().setTitle('Command List (2/2)').setDescription('These commands are able to be used by everyone!').setColor(0x468499).addField('!northkinds', 'Neon...?').addField('!ohcrap', 'CRAP I LEFT THE STOVE ON!').addField('!ohno', 'Oh no... MY MEMES ARE NEXT TO THE STOVE').addField('!profanity', 'WATCH YOUR PROFANITY!!!').addField('!rabblerabble', 'Blah blah blah sounds boring. Rabble rabble sounds better! Use this when everyone is talking and you cant fit yourself into the conversation.').addField('!really', 'Really? Just really?').addField('!rekt', 'REKT BOI XDXDXDXDXD').addField('!ripchat', 'Recognize the chat being dead with this gravestone.').addField('!shhh', 'Be quiet, young one.').addField('!shocked', 'OMG!').addField('!sing', 'Zen sings for us.').addField('!slap', 'When someone does something ***so*** dumb, they need a slap in the face!').addField('!smug', 'You took an extra cookie from the cookie jar and you KNOW IT!').addField('!stupidtail', 'Gah! Stupid tail!!').addField('!topkek', '!kek but different in one way or another. It\'s all preference.').addField('!triforce', 'The triforce of bed will tuck you in goodnight.').addField('!triggered', 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE').addField('!wat', 'Wait what?').setFooter('DM ZenIsBestWolf#9855 with suggestions for more commands!', './src/footer.jpg')
 			message.author.send(helpEmbed1)
 			message.author.send(helpEmbed2)
 			message.delete();
+			break;
+		case "hottie":
+			message.channel.send({
+				file: "./src/sing.png"
+			});
+			message.delete();
+			message.reply("GG! You found a hidden command!")
+			break;
+		case "hotboy":
+			message.channel.send({
+				file: "./src/sing.png"
+			});
+			message.delete();
+			message.reply("GG! You found a hidden command!")
 			break;
 		case "jerks":
 			message.channel.send({
@@ -105,10 +140,19 @@ client.on('message', message => {
 			message.channel.send({
 				file: kekarray[Math.floor(Math.random() * kekarray.length)]
 			});
+			message.channel.send({
+				file: kekarray[Math.floor(Math.random() * kekarray.length)]
+			});
 			message.delete();
 			break;
 		case "lenny":
 			message.channel.send("( ͡° ͜ʖ ͡°)");
+			message.delete();
+			break;
+		case "loreal":
+			message.channel.send({
+				file: "./src/loreal.png"
+			});
 			message.delete();
 			break;
 		case "newcommand":
@@ -123,15 +167,30 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
+		case "ohcrap":
+			message.channel.send({
+				file: "./src/ohrap.png"
+			})
+			break;
+		case "ohno":
+			message.channel.send({
+				file: "./src/ohno.png"
+			})
+			break;
 		case "profanity":
 			message.channel.send({
 				file: "./src/profanity.png"
 			});
 			message.delete();
 			break;
+		case "rabblerabble":
+			message.channel.send({
+				file: "./src/rabblerabble.png"
+			});
+			break;
 		case "really":
 			message.channel.send({
-				file: "./src/really.png"
+				file: reallyarray[Math.floor(Math.random() * reallyarray.length)]
 			});
 			message.delete();
 			break;
@@ -153,9 +212,15 @@ client.on('message', message => {
 			});
 			message.delete();
 			break;
-		case "shook":
+		case "shocked":
 			message.channel.send({
-				file: "./src/shook.png"
+				file: shockedarray[Math.floor(Math.random() * shockedarray.length)]
+			});
+			message.delete();
+			break;
+		case "sing":
+			message.channel.send({
+				file: "./src/sing.png"
 			});
 			message.delete();
 			break;
@@ -170,6 +235,11 @@ client.on('message', message => {
 				file: smugarray[Math.floor(Math.random() * smugarray.length)]
 			});
 			message.delete();
+			break;
+		case "stupidtail":
+			message.channel.send({
+				file: "./src/stupidtail.png"
+			});
 			break;
 		case "topkek":
 			message.channel.send({
@@ -197,14 +267,38 @@ client.on('message', message => {
 			break;
 	};
 	if (message.channel.type === "text") {
+		if (message.member.roles.exists("name", adminRoleName)) {
+			switch (args[0].toLowerCase()) {
+				case "help":
+					var adminHelpEmbed = new Discord.RichEmbed().setTitle('Administrator Commands for Twokinds').setDescription('Special commands intended for Admins only.').setColor(0xFFC300).addField('!wipe', '(Will only work in #welcome!) Deletes all chat messages besides the intro message.').setFooter('Trouble with commands? Please message ZenIsBestWolf#9855.', './src/footer.jpg');
+					message.author.send(adminHelpEmbed);
+					message.author.send(hiddenCommandsEmbed);
+					break;
+				case "wipe":
+					if (message.channel.id != introChannel) {
+						message.reply("That command is only available in the #welcome channel.").then(e => setTimeout(function() {
+							e.delete()
+							message.delete()
+						}, 10000));
+						return;
+					};
+					message.channel.fetchMessages({
+						after: introMSGID
+					}).then(messages => {
+						message.channel.bulkDelete(messages);
+					});
+					break;
+			};
+		};
 		if (message.member.roles.exists("name", modRoleName)) {
 			switch (args[0].toLowerCase()) {
 				case "help":
-					var modHelpEmbed = new Discord.RichEmbed().setTitle('Moderator Commands').setDescription('Special commands intended for Moderator use only.').setColor(0xFFC300).addField('!wipe', '(Will only work in #welcome!) Deletes all chat messages besides the intro message.').setFooter('Trouble with commands? Please message ZenIsBestWolf#9855.', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp');
-					message.author.send(modHelpEmbed)
+					var modHelpEmbed = new Discord.RichEmbed().setTitle('Moderator Commands for Twokinds').setDescription('Special commands intended for Mods only.').setColor(0xFFC300).addField('!wipe', '(Will only work in #welcome!) Deletes all chat messages besides the intro message.').setFooter('Trouble with commands? Please message ZenIsBestWolf#9855.', './src/footer.jpg')
+					message.author.send(modHelpEmbed);
+					message.author.send(hiddenCommandsEmbed);
 					break;
 				case "wipe":
-					if (message.channel.id != '359538465542504448') {
+					if (message.channel.id != introChannel) {
 						message.reply("That command is only available in the #welcome channel.").then(e => setTimeout(function() {
 							e.delete()
 							message.delete()
@@ -234,8 +328,9 @@ client.on('message', message => {
 				message.delete();
 				break;
 			case "help":
-				var zenHelpEmbed = new Discord.RichEmbed().setTitle('Special Commands').setDescription('Special commands intended for Zen\'s use only.').setColor(0x8B0000).addField('!chat [message]', 'Chat [message] as Maddie in the channel that the command is sent in.').addField('!chatin [channel id] [message]', 'Chat in [channel id] with the message [message] as Maddie.').addField('!nick [nickname]', 'Sets Maddie\'s nickname in that server to [nickname].').addField('!perm [permission]', 'Checks if Maddie has [permission] in that guild.').addField('!shutdown', 'Shutdown Maddie.').setFooter('Hi Zen! :)', 'https://cdn.discordapp.com/avatars/183672121522782208/bc9da12fc6355e6a9a828b026762530b.webp');
+				var zenHelpEmbed = new Discord.RichEmbed().setTitle('Special Commands').setDescription('Special commands intended for Zen\'s use only.').setColor(0x8B0000).addField('!chat [message]', 'Chat [message] as Maddie in the channel that the command is sent in.').addField('!chatin [channel id] [message]', 'Chat in [channel id] with the message [message] as Maddie.').addField('!nick [nickname]', 'Sets Maddie\'s nickname in that server to [nickname].').addField('!perm [permission]', 'Checks if Maddie has [permission] in that guild.').addField('!shutdown', 'Shutdown Maddie.').setFooter('Hi Zen! :)', './src/footer.jpg');
 				message.author.send(zenHelpEmbed);
+				message.author.send(hiddenCommandsEmbed);
 				message.delete();
 				break;
 			case "nick":
