@@ -67,10 +67,10 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "boobers":
+			message.delete();
 			message.channel.send({
 				file: boobersarray[Math.floor(Math.random() * boobersarray.length)]
 			});
-			message.delete();
 			message.reply("GG! You found a hidden command!")
 			break;
 		case "boi":
@@ -117,17 +117,17 @@ client.on('message', message => {
 			message.delete();
 			break;
 		case "hottie":
+			message.delete();
 			message.channel.send({
 				file: "./src/sing.png"
 			});
-			message.delete();
 			message.reply("GG! You found a hidden command!")
 			break;
 		case "hotboy":
+			message.delete();
 			message.channel.send({
 				file: "./src/sing.png"
 			});
-			message.delete();
 			message.reply("GG! You found a hidden command!")
 			break;
 		case "jerks":
