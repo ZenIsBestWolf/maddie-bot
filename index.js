@@ -140,9 +140,6 @@ client.on('message', message => {
 			message.channel.send({
 				file: kekarray[Math.floor(Math.random() * kekarray.length)]
 			});
-			message.channel.send({
-				file: kekarray[Math.floor(Math.random() * kekarray.length)]
-			});
 			message.delete();
 			break;
 		case "lenny":
@@ -170,12 +167,14 @@ client.on('message', message => {
 		case "ohcrap":
 			message.channel.send({
 				file: "./src/ohrap.png"
-			})
+			});
+			message.delete();
 			break;
 		case "ohno":
 			message.channel.send({
 				file: "./src/ohno.png"
-			})
+			});
+			message.delete();
 			break;
 		case "profanity":
 			message.channel.send({
@@ -187,6 +186,7 @@ client.on('message', message => {
 			message.channel.send({
 				file: "./src/rabblerabble.png"
 			});
+			message.delete();
 			break;
 		case "really":
 			message.channel.send({
@@ -228,7 +228,7 @@ client.on('message', message => {
 			message.channel.send({
 				file: "./src/slap.png"
 			});
-			message.delete()
+			message.delete();
 			break;
 		case "smug":
 			message.channel.send({
@@ -240,6 +240,7 @@ client.on('message', message => {
 			message.channel.send({
 				file: "./src/stupidtail.png"
 			});
+			message.delete();
 			break;
 		case "topkek":
 			message.channel.send({
@@ -262,6 +263,12 @@ client.on('message', message => {
 		case "wat":
 			message.channel.send({
 				file: "./src/wat.png"
+			});
+			message.delete();
+			break;
+		case "whoa":
+			message.channel.send({
+				file: "./src/whoa.png"
 			});
 			message.delete();
 			break;
