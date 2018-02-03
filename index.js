@@ -178,7 +178,7 @@ client.on('message', message => {
 			break;
 		case "ohcrap":
 			message.channel.send({
-				file: "./src/ohrap.png"
+				file: "./src/ohcrap.png"
 			});
 			message.delete();
 			break;
