@@ -42,7 +42,7 @@ client.on('message', message => {
 	var boobersarray = ["./src/boobers/boobers1.png", "./src/boobers/boobers2.png"];
 	var angryarray = ["./src/angry/angrykeith.png", "./src/angry/angrynat.png"]
 	var shockedarray = ["./src/shocked/shockedsythe.png", "./src/shocked/shockedflora.png"];
-	var hiddenCommandsEmbed = new Discord.RichEmbed().setTitle("Hidden Commands").setDescription("Hidden commands that don\'t show up in the normal help menu, and are only for fun.").setColor(0x696969).addField('!boobers', 'Nat and her boobs. >.>').addField("!hottie and !hotboy", "The same as !sing.").setFooter("Do not share these please! I want people to find them on their own.", "https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg") // THIS COLOR CODE. AMAZING. I SWEAR I JUST GOOGLED GRAY COLOR CODES AND SAW THIS. NOT DISSAPOINTED!
+	var hiddenCommandsEmbed = new Discord.RichEmbed().setTitle("Hidden Commands").setDescription("Hidden commands that don\'t show up in the normal help menu, and are only for fun.").setColor(0x696969).addField('!boobers', 'Nat and her boobs. >.>').addField("!hottie and !hotboy", "The same as !sing.").addField("!hyper", "!happy but editted with a zoom affect. It's hard to explain...").setFooter("Do not share these please! I want people to find them on their own.", "https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg") // THIS COLOR CODE. AMAZING. I SWEAR I JUST GOOGLED GRAY COLOR CODES AND SAW THIS. NOT DISSAPOINTED!
 	switch (args[0].toLowerCase()) {
 		case "about":
 			var aboutEmbed = new Discord.RichEmbed().setThumbnail(client.user.avatarURL).setTitle('Maddie').setColor(0xEE9A00).setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.').addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot').addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.').setFooter('Created by ZenIsBestWolf#9855', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
@@ -133,6 +133,13 @@ client.on('message', message => {
 			message.delete();
 			message.channel.send({
 				file: "./src/sing.png"
+			});
+			message.reply("GG! You found a hidden command!")
+			break;
+		case "hyper":
+			message.delete();
+			message.channel.send({
+				file: "./src/hyper.png"
 			});
 			message.reply("GG! You found a hidden command!")
 			break;
