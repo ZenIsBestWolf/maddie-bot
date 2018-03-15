@@ -125,7 +125,7 @@ client.on('message', message => {
 			.setDescription('Maddie is a simple bot that mostly sends really bad furry memes, but can do some other stuff too.')
 			.addField('Source Code', 'Maddie can be found on GitHub here: https://github.com/ZenIsBestWolf/maddie-bot')
 			.addField('Commands', 'Run !help to get a list of commands. Run !aboutcreator for more information on Zen, the creator of Maddie.')
-			.setFooter('Created by ZenIsBestWolf#9855. Co-Developed by RadioactiveHydra#2570', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
+			.setFooter('Created by ZenIsBestWolf#0446. Co-Developed by RadioactiveHydra#2570', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
 			message.channel.send(aboutEmbed)
 			message.delete();
 			break;
@@ -135,10 +135,10 @@ client.on('message', message => {
 			.setThumbnail('https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
 			.setTitle('About the Creator').setDescription('Everything to know about the creator.')
 			.setColor(0x8B0000)
-			.addField('Zen', 'ZenIsBestWolf#9855')
+			.addField('Zen', 'ZenIsBestWolf#0446')
 			.addField('Why I made Maddie.', 'I wanted to try to make a Discord bot of my own after seeing someone elses bot in another server that has similar functions.')
 			.addField('About Zen', '***no***')
-			.setFooter('DM ZenIsBestWolf#9855 with questions or command ideas!', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
+			.setFooter('DM ZenIsBestWolf#0446 with questions or command ideas!', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
 			message.channel.send(creatorEmbed)
 			var coDevEmbed = new Discord.RichEmbed()
 			.setThumbnail('https://cdn.discordapp.com/avatars/248558529336705026/f1bd61421c1d7283e4871b7e13209b7f.webp')
@@ -213,7 +213,7 @@ client.on('message', message => {
 					.setDescription('Special commands intended for Admins only.')
 					.setColor(0xFFC300)
 					.addField(prefix + 'wipe', '(Will only work in #welcome!) Deletes all chat messages besides the intro message.')
-					.setFooter('Trouble with commands? Please message ZenIsBestWolf#9855 or RadioactiveHydra#2570.', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg');
+					.setFooter('Trouble with commands? Please message ZenIsBestWolf#0446 or RadioactiveHydra#2570.', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg');
 					message.author.send(adminHelpEmbed);
 					message.author.send(hiddenCommandsEmbed);
 					break;
@@ -244,7 +244,7 @@ client.on('message', message => {
 					.setDescription('Special commands intended for Mods only.')
 					.setColor(0xFFC300)
 					.addField(prefix + 'wipe', '(Will only work in #welcome!) Deletes all chat messages besides the intro message.')
-					.setFooter('Trouble with commands? Please message ZenIsBestWolf#9855 or RadioactiveHydra#2570.', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
+					.setFooter('Trouble with commands? Please message ZenIsBestWolf#0446 or RadioactiveHydra#2570.', 'https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg')
 					message.author.send(modHelpEmbed);
 					message.author.send(hiddenCommandsEmbed);
 					break;
