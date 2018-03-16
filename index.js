@@ -103,7 +103,7 @@ var demimages = {
 	"profanity" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "WATCH YOUR PROFANITY!!!"},
 	"rabblerabble" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "Blah blah blah sounds boring. Rabble rabble sounds better! Use this when everyone is talking and you cant fit yourself into the conversation."},
 	"really" : {IsAutomatedCommand : true, IsHidden : false, Type : null, Array : ["reallyflorasketch.png", "reallyflorapage.png", "reallynat.png", "reallymaddie.png"], HelpMessage : "Really? Just really?"},
-	"refresh" : {IsAutomatedCommand: false, IsHidden : false, Type: null, Array: null, HelpMessage: "Manually refresh Maddie\'s Picarto checker. **Please don't abuse this, only use this if you see Tom is live and she hasn't pinged.**"}
+	"refresh" : {IsAutomatedCommand: false, IsHidden : false, Type: null, Array: null, HelpMessage: "Manually refresh Maddie\'s Picarto checker. **Please don't abuse this, only use this if you see Tom is live and she hasn't pinged.**"},
 	"rekt" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "REKT BOI XDXDXDXDXD"},
 	"ripchat" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "Recognize the chat being dead with this gravestone."},
 	"shhh" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "Be quiet, young one."},
