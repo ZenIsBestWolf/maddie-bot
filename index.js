@@ -21,6 +21,36 @@ var adminRoleName = "The Masks (Admins)";
 var introMSGID = "363037157272846336";
 var introChannel = "359538465542504448";
 
+//Get the stream.
+function getStream(){
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open( "GET", "https://api.picarto.tv/v1/channel/name/Twokinds", false ); // false for synchronous request
+	xmlHttp.send(null);
+	return xmlHttp;
+};
+
+// Check Picarto.
+var isStreamOnline = (false)
+setInterval(function(){
+	var updatedStream = getStream().responseText
+	if (getStream().status !== 200) {
+		client.channels.get("359539122496339968").send("<!@183672121522782208> There was a fatal error when checking Picarto. Please check code or Picarto API.");
+		return
+	};
+	var updatedStreamJSON = JSON.parse(updatedStream)
+	if (isStreamOnline === false) {
+	if (updatedStreamJSON.online === true) {
+		client.channels.get("359539122496339968").send("@here Tom is LIVE! https://picarto.tv/Twokinds")
+		var isStreamOnline = (true)
+	} else if (updatedStreamJSON.online === false) return
+	} else if (isStreamOnline === true) {
+		if (updatedStreamJSON.online === true) return
+	} else if (updatedStreamJSON.online === false) {
+			var isStreamOnline = (false)
+			return;
+		};
+}, 60000)
+
 //User Join Message
 client.on('guildMemberAdd', member => {
 	let guild = member.guild;
@@ -73,6 +103,7 @@ var demimages = {
 	"profanity" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "WATCH YOUR PROFANITY!!!"},
 	"rabblerabble" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "Blah blah blah sounds boring. Rabble rabble sounds better! Use this when everyone is talking and you cant fit yourself into the conversation."},
 	"really" : {IsAutomatedCommand : true, IsHidden : false, Type : null, Array : ["reallyflorasketch.png", "reallyflorapage.png", "reallynat.png", "reallymaddie.png"], HelpMessage : "Really? Just really?"},
+	"refresh" : {IsAutomatedCommand: false, IsHidden : false, Type: null, Array: null, HelpMessage: "Manually refresh Maddie\'s Picarto checker. **Please don't abuse this, only use this if you see Tom is live and she hasn't pinged.**"}
 	"rekt" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "REKT BOI XDXDXDXDXD"},
 	"ripchat" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "Recognize the chat being dead with this gravestone."},
 	"shhh" : {IsAutomatedCommand : true, IsHidden : false, Type : "png", Array : null, HelpMessage : "Be quiet, young one."},
@@ -113,7 +144,7 @@ client.on('message', message => {
 		message.delete();
 		}
 	}
-	
+
 	//Other Commands
 	switch (args[0].toLowerCase()) {
 		//About
@@ -190,8 +221,33 @@ client.on('message', message => {
 			message.channel.send("( ͡° ͜ʖ ͡°)");
 			message.delete();
 			break;
+		//Refresh
+		case "refresh":
+			var updatedStream = getStream().responseText
+			if (getStream().status !== 200) {
+				client.channels.get("359539122496339968").send("<!@183672121522782208> There was a fatal error when checking Picarto. Please check code or Picarto API.");
+				return
+			};
+			var updatedStreamJSON = JSON.parse(updatedStream)
+			console.log("User: " + message.author + " refreshed the stream check.")
+			if (isStreamOnline === false) {
+			if (updatedStreamJSON.online === true) {
+				client.channels.get("359539122496339968").send("@here Tom is LIVE! https://picarto.tv/Twokinds")
+				var isStreamOnline = (true)
+			} else if (updatedStreamJSON.online === false) {
+				message.reply("Tom is offline. :(")
+			}} else if (isStreamOnline === true) {
+				if (updatedStreamJSON.online === true) {
+					message.reply("Tom is already online! Watch him now: https://picarto.tv/Twokinds")
+				} else if (updatedStreamJSON.online === false) {
+					message.reply("Tom is offline. :(")
+					var isStreamOnline = (false)
+				};
+			};
+			message.delete();
+			break;
 	};
-	
+
 	//Hidden Command Embed
 	var hiddenCommandsEmbed = new Discord.RichEmbed()
 	.setTitle("Hidden Commands")
@@ -201,7 +257,7 @@ client.on('message', message => {
 	.addField(prefix + "hottie and " + prefix + "hotboy", "The same as " + prefix +  "sing.")
 	.addField(prefix + "hyper", prefix + "happy but editted with a zoom affect. It's hard to explain...")
 	.setFooter("Do not share these please! I want people to find them on their own.", "https://raw.githubusercontent.com/ZenIsBestWolf/maddie-bot/master/src/footer.jpg")
-	
+
 	if (message.channel.type === "text") {
 		//Admin Commands
 		if (message.member.roles.exists("name", adminRoleName)) {
