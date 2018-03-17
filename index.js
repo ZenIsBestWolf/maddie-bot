@@ -1,6 +1,7 @@
 //Documentation Done By RadioactiveHydra
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var token = process.env.TOKEN;
 
 //Startup
@@ -40,7 +41,7 @@ setInterval(function(){
 	var updatedStreamJSON = JSON.parse(updatedStream)
 	if (isStreamOnline === false) {
 	if (updatedStreamJSON.online === true) {
-		client.channels.get("359539122496339968").send("@here Tom is LIVE! https://picarto.tv/Twokinds")
+		client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
 		var isStreamOnline = (true)
 	} else if (updatedStreamJSON.online === false) return
 	} else if (isStreamOnline === true) {
@@ -232,7 +233,7 @@ client.on('message', message => {
 			console.log("User: " + message.author + " refreshed the stream check.")
 			if (isStreamOnline === false) {
 			if (updatedStreamJSON.online === true) {
-				client.channels.get("359539122496339968").send("@here Tom is LIVE! https://picarto.tv/Twokinds")
+				client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
 				var isStreamOnline = (true)
 			} else if (updatedStreamJSON.online === false) {
 				message.reply("Tom is offline. :(")
