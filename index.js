@@ -31,7 +31,7 @@ function getStream(){
 };
 
 // Check Picarto.
-var isStreamOnline = (false)
+isStreamOnline = (false)
 setInterval(function(){
 	var updatedStream = getStream().responseText
 	if (getStream().status !== 200) {
@@ -230,7 +230,7 @@ client.on('message', message => {
 				return
 			};
 			var updatedStreamJSON = JSON.parse(updatedStream)
-			console.log("User: " + message.author + " refreshed the stream check.")
+			console.log("User: " + message.author.username + " refreshed the stream check.")
 			if (isStreamOnline === false) {
 			if (updatedStreamJSON.online === true) {
 				client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
