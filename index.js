@@ -42,12 +42,12 @@ setInterval(function(){
 	if (isStreamOnline === false) {
 	if (updatedStreamJSON.online === true) {
 		client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
-		var isStreamOnline = (true)
+		isStreamOnline = (true)
 	} else if (updatedStreamJSON.online === false) return
 	} else if (isStreamOnline === true) {
 		if (updatedStreamJSON.online === true) return
 	} else if (updatedStreamJSON.online === false) {
-			var isStreamOnline = (false)
+			isStreamOnline = (false)
 			return;
 		};
 }, 60000)
@@ -234,7 +234,7 @@ client.on('message', message => {
 			if (isStreamOnline === false) {
 			if (updatedStreamJSON.online === true) {
 				client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
-				var isStreamOnline = (true)
+				isStreamOnline = (true)
 			} else if (updatedStreamJSON.online === false) {
 				message.reply("Tom is offline. :(")
 			}} else if (isStreamOnline === true) {
@@ -242,7 +242,7 @@ client.on('message', message => {
 					message.reply("Tom is already online! Watch him now: https://picarto.tv/Twokinds")
 				} else if (updatedStreamJSON.online === false) {
 					message.reply("Tom is offline. :(")
-					var isStreamOnline = (false)
+					isStreamOnline = (false)
 				};
 			};
 			message.delete();
