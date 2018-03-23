@@ -31,7 +31,7 @@ isStreamOnline = (false)
 setInterval(function() {
 	var updatedStream = getStream().responseText
 	if (getStream().status !== 200) {
-		client.channels.get("359539122496339968").send("<!@183672121522782208> There was a fatal error when checking Picarto. Please check code or Picarto API.");
+		console.log("<!@183672121522782208> There was a fatal error when checking Picarto. Please check code or Picarto API.");
 		return
 	};
 	var updatedStreamJSON = JSON.parse(updatedStream)
@@ -450,7 +450,7 @@ client.on('message', message => {
 		case "refresh":
 			var updatedStream = getStream().responseText
 			if (getStream().status !== 200) {
-				client.channels.get("359539122496339968").send("<!@183672121522782208> There was a fatal error when checking Picarto. Please check code or Picarto API.");
+				message.reply("There was a fatal error when checking Picarto. Please wait for Picarto to fix this.");
 				return
 			};
 			var updatedStreamJSON = JSON.parse(updatedStream)
