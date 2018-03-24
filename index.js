@@ -31,7 +31,7 @@ isStreamOnline = (false)
 setInterval(function() {
 	var updatedStream = getStream().responseText
 	if (getStream().status !== 200) {
-		console.log("<!@183672121522782208> There was a fatal error when checking Picarto. Please check code or Picarto API.");
+		console.log("There was a fatal error when checking Picarto. Please check code or Picarto API.");
 		return
 	};
 	var updatedStreamJSON = JSON.parse(updatedStream)
