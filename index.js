@@ -373,8 +373,13 @@ var demimages = {
 }
 //OnMessage
 client.on('message', message => {
+	if (message.content.includes("@someone")) {
+		message.delete()
+		message.reply("@ someone is not allowed.")
+	};
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
+	console.log(message.author.username + " used " + message.content)
 	var args = message.content.substring(prefix.length).split(" ");
 	//Get Image Engine
 	for (i = 0; i < Object.keys(demimages).length; i++) {
