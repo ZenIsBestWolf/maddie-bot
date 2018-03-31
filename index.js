@@ -20,33 +20,33 @@ var adminRoleName = "The Masks (Admins)";
 var introMSGID = "363037157272846336";
 var introChannel = "359538465542504448";
 //Get the stream.
-function getStream() {
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open("GET", "https://api.picarto.tv/v1/channel/name/Twokinds", false); // false for synchronous request
-	xmlHttp.send(null);
-	return xmlHttp;
-};
+//function getStream() {
+	//var xmlHttp = new XMLHttpRequest();
+	//xmlHttp.open("GET", "https://api.picarto.tv/v1/channel/name/Twokinds", false); // false for synchronous request
+	//xmlHttp.send(null);
+	//return xmlHttp;
+//};
 // Check Picarto.
-isStreamOnline = (false)
-setInterval(function() {
-	var updatedStream = getStream().responseText
-	if (getStream().status !== 200) {
-		console.log("There was a fatal error when checking Picarto. Please check code or Picarto API.");
-		return
-	};
-	var updatedStreamJSON = JSON.parse(updatedStream)
-	if (isStreamOnline === false) {
-		if (updatedStreamJSON.online === true) {
-			client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
-			isStreamOnline = (true)
-		} else if (updatedStreamJSON.online === false) return
-	} else if (isStreamOnline === true) {
-		if (updatedStreamJSON.online === true) return
-	} else if (updatedStreamJSON.online === false) {
-		isStreamOnline = (false)
-		return;
-	};
-}, 60000)
+//isStreamOnline = (false)
+//setInterval(function() {
+//	var updatedStream = getStream().responseText
+//	if (getStream().status !== 200) {
+//		console.log("There was a fatal error when checking Picarto. Please check code or Picarto API.");
+//		return
+//	};
+//	var updatedStreamJSON = JSON.parse(updatedStream)
+//	if (isStreamOnline === false) {
+//		if (updatedStreamJSON.online === true) {
+//			client.channels.get("359539122496339968").send("<@&362934916276551680> Tom is LIVE! https://picarto.tv/Twokinds")
+//			isStreamOnline = (true)
+//		} else if (updatedStreamJSON.online === false) return
+//	} else if (isStreamOnline === true) {
+//		if (updatedStreamJSON.online === true) return
+//	} else if (updatedStreamJSON.online === false) {
+//		isStreamOnline = (false)
+//		return;
+//	};
+//}, 60000)
 //User Join Message
 client.on('guildMemberAdd', member => {
 	let guild = member.guild;
@@ -272,13 +272,13 @@ var demimages = {
 		Array: ["reallyflorasketch.png", "reallyflorapage.png", "reallynat.png", "reallymaddie.png"],
 		HelpMessage: "Really? Just really?"
 	},
-	"refresh": {
-		IsAutomatedCommand: false,
-		IsHidden: false,
-		Type: null,
-		Array: null,
-		HelpMessage: "Manually refresh Maddie\'s Picarto checker. **Please don't abuse this, only use this if you see Tom is live and she hasn't pinged.**"
-	},
+//	"refresh": {
+//		IsAutomatedCommand: false,
+//		IsHidden: false,
+//		Type: null,
+//		Array: null,
+//		HelpMessage: "Manually refresh Maddie\'s Picarto checker. **Please don't abuse this, only use this if you see Tom is live and she hasn't pinged.**"
+//	},
 	"rekt": {
 		IsAutomatedCommand: true,
 		IsHidden: false,
