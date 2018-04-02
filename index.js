@@ -6,7 +6,7 @@ var token = process.env.TOKEN;
 //Startup
 client.on('ready', () => {
 	console.log('Online. The default global prefix is: ' + prefix);
-	client.user.setGame('with Landen\'s coffee!');
+	client.user.setGame('with Maeve!');
 });
 process.on('unhandledRejection', console.error);
 //Variables
