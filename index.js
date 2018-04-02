@@ -373,10 +373,6 @@ var demimages = {
 }
 //OnMessage
 client.on('message', message => {
-	if (message.content.includes("@someone")) {
-		message.delete()
-		message.reply("@ someone is not allowed.")
-	};
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
 	console.log(message.author.username + " used " + message.content)
