@@ -377,20 +377,20 @@ client.on('message', message => {
 	if (message.author.bot) return;
 	console.log(message.author.username + " used " + message.content)
 	var args = message.content.substring(prefix.length).split(" ");
-	//Get Image Engine
-	for (i = 0; i < Object.keys(demimages).length; i++) {
-		command = Object.keys(demimages)[i]
-		if (args[0].toLowerCase() == Object.keys(demimages)[i] && Object.values(demimages)[i].IsAutomatedCommand == true) {
-			if (Object.values(demimages)[i].Array == null) {
+	var command = demimages[args[0].toLowerCase()]
+	if (command != undefined){
+	if (command != undefined){
+		if(command.IsAutomatedCommand == true){
+			if (command.Array == null) {
 				message.channel.send({
-					file: "./src/" + Object.keys(demimages)[i] + "." + Object.values(demimages)[i].Type
+					file: "./src/" + args[0].toLowerCase() + "." + command.Type
 				});
 			} else {
 				message.channel.send({
-					file: "./src/" + Object.keys(demimages)[i] + "/" + Object.values(demimages)[i].Array[Math.floor(Math.random() * Object.values(demimages)[i].Array.length)]
+					file: "./src/" + args[0].toLowerCase() + "/" + command.Array[Math.floor(Math.random() * command.Array.length)]
 				});
 			}
-			if (Object.values(demimages)[i].IsHidden == true) {
+			if (command.IsHidden == true) {
 				message.reply("GG! You found a hidden command!")
 			}
 			message.delete();
