@@ -379,7 +379,6 @@ client.on('message', message => {
 	var args = message.content.substring(prefix.length).split(" ");
 	var command = demimages[args[0].toLowerCase()]
 	if (command != undefined){
-	if (command != undefined){
 		if(command.IsAutomatedCommand == true){
 			if (command.Array == null) {
 				message.channel.send({
