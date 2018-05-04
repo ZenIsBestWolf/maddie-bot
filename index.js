@@ -17,7 +17,7 @@ var jc = "359539469231063052";
 var lg = "359538295375659010";
 var modRoleName = "Basitin Exiles (Mods)";
 var adminRoleName = "The Masks (Admins)";
-var introMSGID = "363037157272846336";
+var introMSGID = "441975697548902400";
 var introChannel = "359538465542504448";
 //Get the stream.
 //function getStream() {
