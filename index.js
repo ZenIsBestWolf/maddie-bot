@@ -1,7 +1,6 @@
 //Documentation Done By RadioactiveHydra
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var token = process.env.TOKEN;
 //Startup
 client.on('ready', () => {
