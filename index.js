@@ -344,7 +344,7 @@ client.on('message', message => {
 	var command = demimages[args[0].toLowerCase()]
 	if (command != undefined){
 		if(command.IsAutomatedCommand == true){
-			if (command.Array == null) {
+			if (!command.Array) {
 				message.channel.send({
 					file: "./src/" + args[0].toLowerCase() + "." + command.Type
 				});
