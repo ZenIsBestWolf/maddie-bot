@@ -383,8 +383,7 @@ client.on('message', message => {
 					helpMessages++
 				}
 			}
-			var helpPageR = helpMessages % 25
-			var helpPages = ((helpMessages - helpPageR) / 25) + 1
+			var helpPages = Math.ceil(helpMessages / 25)
 			var currentHelpPage = 1
 			var tempHelpNum = 0
 			var helpEmbed = []
