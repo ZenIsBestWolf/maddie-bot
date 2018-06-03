@@ -1,0 +1,353 @@
+{
+	"about": {
+		"IsAutomatedCommand": false,
+		"IsHidden": false,
+		"Type": null,
+		"Array": null,
+		"HelpMessage": "Everything you need to know about Maddie.",
+		"Permission": 0
+	},
+	"alot": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "ITS A LOT NOT ALOT",
+		"Permission": 0
+	},
+	"angry": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": null,
+		"Array": ["angrykeith.png", "angrynat.png"],
+		"HelpMessage": "AAAAAAAAAAAAAAAAAAAAAAAA",
+		"Permission": 0
+	},
+	"beg": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "*pwease* can i has one more cookie?",
+		"Permission": 0
+	},
+	"boobers": {
+		"IsAutomatedCommand": true,
+		"IsHidden": true,
+		"Type": null,
+		"Array": ["boobers1.png", "boobers2.png"],
+		"HelpMessage": "IF YOU SEE THIS MESSAGE REPORT IT NOW",
+		"Permission": 0
+	},
+	"boi": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "When someone does something *that* stupid.",
+		"Permission": 0
+	},
+	"coffee": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "gif",
+		"Array": null,
+		"HelpMessage": "MUST. HAVE. COFFEE!!!",
+		"Permission": 0
+	},
+	"cuddles": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "jpg",
+		"Array": null,
+		"HelpMessage": "low impact consensual cuddling",
+		"Permission": 0
+	},
+	"chat": {
+		"IsAutomatedCommand": false,
+		"IsHidden": false,
+		"Type": null,
+		"Array": null,
+		"HelpMessage": "Chat in the current channel.",
+		"Permission": 3
+	},
+	"embarrassed": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": null,
+		"Array": ["embarrassedkat.png", "embarrassedmike.png", "embarrassedkeith.png", "embarrassedflora.png", "embarrassednat1.png", "embarrassednat2.png", "embarrassednat3.png", "embarrassedtrace.png"],
+		"HelpMessage": "Did I send that...? Woops...",
+		"Permission": 0
+	},
+	"glomp": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "jpg",
+		"Array": null,
+		"HelpMessage": "GLOMP!",
+		"Permission": 0
+	},
+	"haha": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Nat giving us laughter of joy... or mockery. We're not sure.",
+		"Permission": 0
+	},
+	"happy": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Hooray!",
+		"Permission": 0
+	},
+	"help": {
+		"IsAutomatedCommand": false,
+		"IsHidden": false,
+		"Type": null,
+		"Array": null,
+		"HelpMessage": "Know the commands. It sends this very message!",
+		"Permission": 0
+	},
+	"hottie": {
+		"IsAutomatedCommand": true,
+		"IsHidden": true,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "That Zen... oh man...",
+		"Permission": 0
+	},
+	"hotboy": {
+		"IsAutomatedCommand": true,
+		"IsHidden": true,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "That Zen... oh man...",
+		"Permission": 0
+	},
+	"hyper": {
+		"IsAutomatedCommand": true,
+		"IsHidden": true,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "AHHHHHHHHHHHHHHHHHHHHHH",
+		"Permission": 0
+	},
+	"jerks": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Talk about rude!",
+		"Permission": 0
+	},
+	"kek": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": null,
+		"Array": ["kekzen.png", "kekkaren.png"],
+		"HelpMessage": "'I kek.' - Aran Tukasko, 2017 (LOL but better!)",
+		"Permission": 0
+	},
+	"lenny": {
+		"IsAutomatedCommand": false,
+		"IsHidden": false,
+		"Type": null,
+		"Array": null,
+		"HelpMessage": "( ͡° ͜ʖ ͡°)",
+		"Permission": 0
+	},
+	"loreal": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Nat advertising Loreal.",
+		"Permission": 0
+	},
+	"nani": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "NANI!?",
+		"Permission": 0
+	},
+	"newcommand": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "For that good reaction.",
+		"Permission": 0
+	},
+	"nick": {
+		"IsAutomatedCommand": false,
+		"IsHidden": false,
+		"Type": null,
+		"Array": null,
+		"HelpMessage": "Change my nickname.",
+		"Permission": 2
+	},
+	"northkinds": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Neon...?",
+		"Permission": 0
+	},
+	"ohcrap": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "CRAP I LEFT THE STOVE ON!",
+		"Permission": 0
+	},
+	"ohno": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Oh no... MY MEMES ARE NEXT TO THE STOVE",
+		"Permission": 0
+	},
+	"profanity": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "WATCH YOUR PROFANITY!!!",
+		"Permission": 0
+	},
+	"rabblerabble": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Blah blah blah sounds boring. Rabble rabble sounds better! Use this when everyone is talking and you cant fit yourself into the conversation.",
+		"Permission": 0
+	},
+	"really": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": null,
+		"Array": ["reallyflorasketch.png", "reallyflorapage.png", "reallynat.png", "reallymaddie.png"],
+		"HelpMessage": "Really? Just really?",
+		"Permission": 0
+	},
+	"rekt": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "REKT BOI XDXDXDXDXD",
+		"Permission": 0
+	},
+	"ripchat": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Recognize the chat being dead with this gravestone.",
+		"Permission": 0
+	},
+	"shhh": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Be quiet, young one.",
+		"Permission": 0
+	},
+	"shocked": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": null,
+		"Array": ["shockedsythe.png", "hockedflora.png"],
+		"HelpMessage": "OMG!",
+		"Permission": 0
+	},
+	"sing": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Zen sings for us.",
+		"Permission": 0
+	},
+	"slap": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "When someone does something ***so*** dumb, they need a slap in the face!",
+		"Permission": 0
+	},
+	"smug": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": null,
+		"Array": ["smugzen.png", "smugflora.png", "smugkeith.png", "smugnat.png"],
+		"HelpMessage": "You took an extra cookie from the cookie jar and you KNOW IT!",
+		"Permission": 0
+	},
+	"stupidtail": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Gah! Stupid tail!!",
+		"Permission": 0
+	},
+	"topkek": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "The command kek but different in one way or another. It's all preference.",
+		"Permission": 0
+	},
+	"triforce": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "The triforce of bed will tuck you in goodnight."
+	},
+	"triggered": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "gif",
+		"Array": null,
+		"HelpMessage": "REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+		"Permission": 0
+	},
+	"wat": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Wait what?",
+		"Permission": 0
+	},
+	"whoa": {
+		"IsAutomatedCommand": true,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Whoa! Cool!",
+		"Permission": 0
+	},
+	"wipe": {
+		"IsAutomatedCommand": false,
+		"IsHidden": false,
+		"Type": "png",
+		"Array": null,
+		"HelpMessage": "Wipe away the chat until the intro message.",
+		"Permission": 1
+	}
+}
