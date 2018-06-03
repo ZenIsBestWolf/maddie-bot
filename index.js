@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const commandList = require("./commands.json");
-var token = process.ENV.TOKEN
+var token = process.env.TOKEN
 //Startup
 client.on('ready', () => {
   console.log('Online and ready to go! Bot running with prefix ' + prefix);
