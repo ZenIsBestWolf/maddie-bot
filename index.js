@@ -84,7 +84,7 @@ client.on('message', message => {
       if (message.channel.type === "text") message.delete();
       break;
     case "go":
-      if (userPerm < 3) return;
+      if (userPermLevel < 3) return;
       message.delete();
       message.guild.leave();
       break;
