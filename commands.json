@@ -79,6 +79,14 @@
 		"HelpMessage": "Did I send that...? Woops...",
 		"Permission": 0
 	},
+	"go": {
+		"IsAutomatedCommand": false,
+		"IsHidden": true,
+		"Type": null,
+		"Array": null,
+		"HelpMessage": "Go",
+		"Permission": 3
+	},
 	"glomp": {
 		"IsAutomatedCommand": true,
 		"IsHidden": false,
