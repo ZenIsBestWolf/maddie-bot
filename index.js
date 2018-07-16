@@ -83,6 +83,11 @@ client.on('message', message => {
       message.channel.send(msg);
       if (message.channel.type === "text") message.delete();
       break;
+    case "go":
+      if (userPerm < 3) return;
+      message.delete();
+      message.guild.leave();
+      break;
     case "help":
   		var helpMessages = 0
   		for (i = 0; Object.keys(commandList).length > i; i++) {
