@@ -1,4 +1,10 @@
-Maddie Bot is a private and server specific discord.js bot.
+Hi there. My name is Zen, I'm the developer of this bot.
+Originally, this was created for the Twokinds server. I found that the bot was not well used by anyone but the mods, and so I killed it.
+Recently, a friend made a private server and wanted something like the Maeve bot from the Twokinds Group Chat discord bot.
+Maddie was originally designed to be just that, I wanted to make something like that.
+So I decided to run this again. This will not be reintroduced into the Twokinds discord unless I am explicitly contacted for such purposes.
+
+-Zen
 
 This Discord bot is specifically designed for the Twokinds discord, and may seem odd or not function properly in other guilds, despite some of the error catching I have programmed.
 

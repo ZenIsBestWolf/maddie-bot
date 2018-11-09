@@ -69,7 +69,7 @@
 		"Type": null,
 		"Array": null,
 		"HelpMessage": "Chat in the current channel.",
-		"Permission": 3
+		"Permission": 1
 	},
 	"embarrassed": {
 		"IsAutomatedCommand": true,
@@ -78,14 +78,6 @@
 		"Array": ["embarrassedkat.png", "embarrassedmike.png", "embarrassedkeith.png", "embarrassedflora.png", "embarrassednat1.png", "embarrassednat2.png", "embarrassednat3.png", "embarrassedtrace.png"],
 		"HelpMessage": "Did I send that...? Woops...",
 		"Permission": 0
-	},
-	"go": {
-		"IsAutomatedCommand": false,
-		"IsHidden": true,
-		"Type": null,
-		"Array": null,
-		"HelpMessage": "Go",
-		"Permission": 3
 	},
 	"glomp": {
 		"IsAutomatedCommand": true,
@@ -197,7 +189,7 @@
 		"Type": null,
 		"Array": null,
 		"HelpMessage": "Change my nickname.",
-		"Permission": 2
+		"Permission": 1
 	},
 	"northkinds": {
 		"IsAutomatedCommand": true,
@@ -349,13 +341,5 @@
 		"Array": null,
 		"HelpMessage": "Whoa! Cool!",
 		"Permission": 0
-	},
-	"wipe": {
-		"IsAutomatedCommand": false,
-		"IsHidden": false,
-		"Type": "png",
-		"Array": null,
-		"HelpMessage": "Wipe away the chat until the intro message.",
-		"Permission": 1
 	}
 }
