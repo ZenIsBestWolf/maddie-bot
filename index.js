@@ -20,7 +20,7 @@ client.on('message', message => {
   //Check if the command exists.
   if (command === undefined) return;
   var userPermLevel = 0
-  if (message.channel.type === "text" && message.member.role.exists("name", "Admins")) userPermLevel = 1
+  if (message.channel.type === "text" && message.member.roles.exists("name", "Admins")) userPermLevel = 1
   if (message.author.id === zen) userPermLevel = 2
   if (command.IsAutomatedCommand == true){
     if (!command.Array) {
